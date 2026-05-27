@@ -369,11 +369,11 @@ html, body {
 .about-statement em { color: var(--cyan); font-style: normal; font-weight: 700; }
 .about-statement em.copper { color: var(--copper); }
 
-/* About 페이지 — 좌측 프로필 + 우측 statement */
+/* About 페이지 — 좌측 프로필(원본 사이즈) + 우측 statement */
 .about-intro {
   display: grid;
-  grid-template-columns: 44mm 1fr;
-  gap: 28px;
+  grid-template-columns: 28mm 1fr;
+  gap: 22px;
   align-items: center;
   margin-top: 22px;
 }
@@ -382,15 +382,16 @@ html, body {
   aspect-ratio: 100 / 128;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-sm);
 }
 .about-profile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  image-rendering: auto;
 }
 
 /* ============================================================
