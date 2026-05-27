@@ -258,12 +258,7 @@ html, body {
    Section Title (page heading) — bigger
    ============================================================ */
 .section-eyebrow {
-  font-size: 13px;
-  font-weight: 700;
-  color: var(--cyan);
-  margin-bottom: 10px;
-  display: inline-flex; align-items: center; gap: 10px;
-  letter-spacing: 0.02em;
+  display: none;
 }
 .section-eyebrow .bar {
   display: inline-block; width: 26px; height: 2px; background: var(--cyan); border-radius: 2px;
