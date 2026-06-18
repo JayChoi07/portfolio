@@ -260,8 +260,8 @@ html, body {
 .about-statement em { color: var(--accent); font-style: normal; font-weight: 700; }
 .about-statement em.copper { color: var(--accent); font-style: normal; }
 .about-intro { display: grid; grid-template-columns: 30mm 1fr; gap: 24px; align-items: center; margin-top: 24px; }
-.about-profile { width: 100%; aspect-ratio: 100/128; border-radius: 10px; overflow: hidden; line-height: 0; box-shadow: 0 0 0 1px var(--border), 0 6px 18px rgba(22,22,26,0.10); }
-.about-profile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-profile { width: 100%; line-height: 0; }
+.about-profile img { width: 100%; height: auto; display: block; border-radius: 6px; }
 
 /* ============================================================
    CAREER timeline
