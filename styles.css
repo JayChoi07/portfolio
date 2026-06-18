@@ -158,13 +158,14 @@ html, body {
   box-shadow: var(--shadow-sm);
 }
 .kpi-card .kpi-label {
-  font-family: var(--font-sans); font-size: 12px; letter-spacing: 0;
-  color: var(--text-mute); font-weight: 600;
+  font-family: var(--font-sans); font-size: 13px; letter-spacing: 0;
+  color: var(--accent); font-weight: 700;
   margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
 }
 .kpi-card .kpi-label .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); display:inline-block; }
-.kpi-card.kpi-copper .kpi-label .dot { background: var(--text-dim); }
+.kpi-card.kpi-copper .kpi-label .dot { background: var(--accent); }
 .kpi-card.kpi-emerald .kpi-label .dot { background: var(--accent); }
+.kpi-card .kpi-sub { color: var(--text-2); }
 .kpi-card .kpi-value {
   font-family: var(--font-disp); font-variant-numeric: tabular-nums;
   font-size: 52px; line-height: 1.0; font-weight: 700; color: var(--text); letter-spacing: -0.03em;
@@ -219,7 +220,7 @@ html, body {
    ============================================================ */
 .toc-hero { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; border-top: 2px solid var(--ink); border-bottom: 1px solid var(--border); margin: 4px 0 22px; }
 .toc-hero .cell { padding: 16px 18px 18px 0; }
-.toc-hero .cell .l { font-family: var(--font-sans); font-size: 12px; letter-spacing: 0; color: var(--text-mute); font-weight: 600; }
+.toc-hero .cell .l { font-family: var(--font-sans); font-size: 13px; letter-spacing: 0; color: var(--accent); font-weight: 700; }
 .toc-hero .cell .v { font-family: var(--font-disp); font-size: 40px; font-weight: 700; letter-spacing: -0.03em; margin-top: 8px; }
 .toc-hero .cell .v .u { font-size: 15px; color: var(--accent); }
 
@@ -253,7 +254,7 @@ html, body {
 .pillar .desc { font-size: 13px; line-height: 1.6; color: var(--text-mute); }
 
 .about-meta-row { display: grid; grid-template-columns: repeat(6,1fr); gap: 16px; margin-top: 22px; padding: 20px 24px; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); }
-.about-meta-row .item .label { font-family: var(--font-sans); font-size: 11.5px; color: var(--text-mute); font-weight: 600; margin-bottom: 7px; letter-spacing: 0; }
+.about-meta-row .item .label { font-family: var(--font-sans); font-size: 12px; color: var(--accent); font-weight: 700; margin-bottom: 7px; letter-spacing: 0; }
 .about-meta-row .item .value { font-size: 14.5px; color: var(--text); font-weight: 700; line-height: 1.35; }
 .about-meta-row .item .value .sub { font-size: 11px; color: var(--text-mute); font-weight: 500; display: block; margin-top: 3px; }
 .about-statement { font-size: 26px; line-height: 1.45; font-weight: 600; letter-spacing: -0.015em; color: var(--text); margin: 0; }
@@ -315,7 +316,7 @@ html, body {
 .proj-head .left .section-title { font-size: 44px; margin-bottom: 10px; }
 .proj-head .left .section-subtitle { max-width: 100%; }
 .proj-head .right { display: grid; grid-template-columns: 72px 1fr; gap: 9px 16px; font-size: 14px; align-content: start; background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; }
-.proj-head .right .key { font-family: var(--font-sans); color: var(--text-mute); font-weight: 600; font-size: 12px; letter-spacing: 0; padding-top: 3px; }
+.proj-head .right .key { font-family: var(--font-sans); color: var(--accent); font-weight: 700; font-size: 12.5px; letter-spacing: 0; padding-top: 3px; }
 .proj-head .right .val { color: var(--text); line-height: 1.55; }
 
 .proj-section { margin-top: 18px; }
@@ -332,7 +333,7 @@ html, body {
    Diagram boxes
    ============================================================ */
 .diagram-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 13px 15px; font-size: 13px; color: var(--text); display: inline-flex; flex-direction: column; gap: 4px; align-items: flex-start; box-shadow: var(--shadow-sm); }
-.diagram-box .label { font-family: var(--font-sans); font-size: 11.5px; color: var(--text-mute); font-weight: 600; letter-spacing: 0; }
+.diagram-box .label { font-family: var(--font-sans); font-size: 12px; color: var(--text-2); font-weight: 700; letter-spacing: 0; }
 .diagram-box .value { font-size: 14px; font-weight: 700; }
 .diagram-box.cyan { border-color: var(--accent-l); background: var(--accent-2); }
 .diagram-box.cyan .value { color: var(--accent); }
@@ -362,7 +363,7 @@ html, body {
 .effect-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
 .effect-table th, .effect-table td { text-align: left; padding: 11px 14px; font-size: 14px; border-bottom: 1px solid var(--border); }
 .effect-table tr:last-child td { border-bottom: none; }
-.effect-table th { font-family: var(--font-sans); font-size: 12.5px; color: var(--text-mute); font-weight: 600; letter-spacing: 0; background: var(--bg-soft); }
+.effect-table th { font-family: var(--font-sans); font-size: 12.5px; color: var(--text-2); font-weight: 700; letter-spacing: 0; background: var(--bg-soft); }
 .effect-table td.before { color: var(--text-mute); }
 .effect-table td.after { color: var(--accent); font-weight: 600; }
 .effect-table td.metric { color: var(--text); font-weight: 700; }
