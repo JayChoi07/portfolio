@@ -4,7 +4,7 @@
 
 ## 보기
 
-- **온라인**: https://aima0719.github.io/portfolio/
+- **온라인**: https://jaychoi07.github.io/portfolio/
 - **PDF**: [portfolio.pdf](./portfolio.pdf)
 
 ## 연락처
