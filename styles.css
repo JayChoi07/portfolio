@@ -407,6 +407,9 @@ html, body {
 .shot-landscape { max-height: 75mm; width: 100%; }
 .phone-img-box { display: flex; align-items: flex-start; justify-content: center; }
 .phone-img-box img { max-height: 95mm; width: auto; border-radius: 14px; border: 6px solid #16161A; box-shadow: var(--shadow); }
+/* 4-up gallery: cap phone height so captions never collide */
+.shot-grid-4 .phone-img-box { height: auto !important; }
+.shot-grid-4 .phone-img-box img { max-height: 76mm; }
 .auto-img-box { display: flex; align-items: center; justify-content: center; background: #16161A; border-radius: 10px; padding: 8px; box-shadow: var(--shadow); }
 .auto-img-box img { max-height: 60mm; width: 100%; height: auto; border-radius: 6px; object-fit: contain; }
 
