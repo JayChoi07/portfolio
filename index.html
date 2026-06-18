@@ -1046,12 +1046,10 @@
       <table class="effect-table">
         <thead><tr><th>지표</th><th>Before</th><th>After</th><th>효과</th></tr></thead>
         <tbody>
-          <tr><td class="metric">바인딩 코드량</td><td class="before">~460줄</td><td class="after">~260줄</td><td class="delta">▼ 약 44%</td></tr>
           <tr><td class="metric">신규 항목 추가 비용</td><td class="before">서너 군데 수정</td><td class="after">한 곳만 수정</td><td class="delta">▼ 70%+</td></tr>
           <tr><td class="metric">지원 엔진 타입</td><td class="before">2종 (가솔린·디젤)</td><td class="after">5종 (+LPG·EV·수소)</td><td class="delta">▲ 2.5×</td></tr>
           <tr><td class="metric">레이아웃 분기</td><td class="before">1종</td><td class="after">4종 (폰·태블릿 × 가로·세로)</td><td class="delta">▲ 4×</td></tr>
           <tr><td class="metric">사용자 매핑 옵션</td><td class="before">0 (하드코딩)</td><td class="after">항목별 N:1 선택</td><td class="delta">신규</td></tr>
-          <tr><td class="metric">B2C·B2B 코드</td><td class="before">화면 코드 2벌</td><td class="after">공통 인터페이스 1벌 + 구현 2벌</td><td class="delta">통일</td></tr>
         </tbody>
       </table>
     </div>
@@ -1135,7 +1133,7 @@
         <g font-family="Pretendard, sans-serif">
           <rect x="240" y="10" width="420" height="50" rx="10" fill="#EEF0FE" stroke="#4F46E5"/>
           <text x="450" y="32" text-anchor="middle" fill="#4F46E5" font-size="11" font-weight="700">Firebase Remote Config · 9개 필드 · 1시간 주기 fetch</text>
-          <text x="450" y="50" text-anchor="middle" fill="#18181B" font-size="13" font-weight="600">SKIP_DAY · VISIBLE · AD_TYPE · RESTRICTED_COUNTRIES …</text>
+          <text x="450" y="50" text-anchor="middle" fill="#18181B" font-size="13" font-weight="600">노출 빈도 · 팝업 표시 · 광고 타입 · 제외 국가 …</text>
 
           <g>
             <rect x="20" y="100" width="135" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
@@ -1201,9 +1199,9 @@
         <div class="proj-section-title"><span class="marker">B</span>Remote Config 9개 동적 제어</div>
         <p class="t-body text-mute" style="margin:0 0 6px;">서버 배포 없이 광고 정책 변경.</p>
         <ul class="bullet-list">
-          <li>SKIP_DAY · DIALOG_VISIBLE · APP_OPENING</li>
-          <li>REWARD_AD_SHOW · DASHBOARD_AD_TYPE</li>
-          <li>RESTRICTED_COUNTRIES = ["KR", "JP"]</li>
+          <li>광고 노출 빈도 · 스킵 주기</li>
+          <li>팝업 · 앱시작 · 리워드 광고 표시 여부</li>
+          <li>대시보드 광고 타입 · 광고 제외 국가 (한국·일본)</li>
         </ul>
       </div>
     </div>
