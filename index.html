@@ -69,49 +69,36 @@
   </div>
 
   <div class="page-content">
-    <div class="section-eyebrow"><span class="bar"></span>전체 차례 · TABLE OF CONTENTS</div>
-    <h1 class="section-title" style="font-size: 64px; margin-bottom: 12px;">목차<span class="accent">.</span></h1>
-    <p class="section-subtitle" style="margin-bottom: 22px; font-size: 17px;">자기소개부터 5개 주요 프로젝트까지 — 차량 도메인에서 4년간 쌓은 엔지니어링 기록.</p>
+    <div style="display:flex;align-items:baseline;gap:14px;">
+      <h1 class="section-title" style="font-size:60px;margin-bottom:0;">목차<span class="accent">.</span></h1>
+      <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;color:var(--text-dim);text-transform:uppercase;">/ INDEX</span>
+    </div>
+    <p class="section-subtitle" style="margin:10px 0 0;">자기소개부터 5개 주요 프로젝트까지 — 차량 도메인에서 4년간 쌓은 기록.</p>
 
-    <!-- 상단 요약 KPI -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom: 22px;">
-      <div class="kpi-card" style="padding:14px 16px 12px;">
-        <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>총 페이지</div>
-        <div class="kpi-value" style="font-size:38px;">23<span class="unit">p</span></div>
-      </div>
-      <div class="kpi-card kpi-copper" style="padding:14px 16px 12px;">
-        <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>소개 섹션</div>
-        <div class="kpi-value" style="font-size:38px;">4<span class="unit">파트</span></div>
-      </div>
-      <div class="kpi-card kpi-feature" style="padding:14px 16px 12px;">
-        <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>주요 프로젝트</div>
-        <div class="kpi-value" style="font-size:38px;">5<span class="unit">개</span></div>
-      </div>
-      <div class="kpi-card kpi-emerald" style="padding:14px 16px 12px;">
-        <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>도메인</div>
-        <div class="kpi-value" style="font-size:38px;">차량<span class="unit"> · OBD</span></div>
-      </div>
+    <div class="toc-hero">
+      <div class="cell"><div class="l">총 페이지</div><div class="v">23<span class="u">p</span></div></div>
+      <div class="cell"><div class="l">소개 섹션</div><div class="v">4<span class="u">파트</span></div></div>
+      <div class="cell"><div class="l">주요 프로젝트</div><div class="v">5<span class="u">개</span></div></div>
+      <div class="cell"><div class="l">도메인</div><div class="v" style="font-size:30px;">차량 · OBD</div></div>
     </div>
 
-    <div class="toc-list">
+    <div class="toc-cols">
       <div>
-        <div class="toc-section-title">소개</div>
-        <div class="toc-item"><span class="num">03</span><span class="label">자기소개</span><span class="pg">03</span></div>
-        <div class="toc-item"><span class="num">04</span><span class="label">경력 사항</span><span class="pg">04</span></div>
-        <div class="toc-item"><span class="num">05</span><span class="label">기술 보유</span><span class="pg">05</span></div>
-        <div class="toc-item"><span class="num">06</span><span class="label">참여 프로젝트 목록</span><span class="pg">06</span></div>
-
-        <div class="toc-section-title with-spacer">마무리</div>
-        <div class="toc-item"><span class="num">23</span><span class="label">감사 인사</span><span class="pg">23</span></div>
+        <div class="toc-group-title">소개 · INTRO</div>
+        <div class="toc-row"><span class="n">03</span><span class="t">자기소개<span class="d">개발자 소개</span></span><span class="pg">03</span></div>
+        <div class="toc-row"><span class="n">04</span><span class="t">경력 사항<span class="d">한 회사 · 한 도메인</span></span><span class="pg">04</span></div>
+        <div class="toc-row"><span class="n">05</span><span class="t">기술 보유<span class="d">언어 · 도구 · 아키텍처</span></span><span class="pg">05</span></div>
+        <div class="toc-row"><span class="n">06</span><span class="t">참여 프로젝트 목록</span><span class="pg">06</span></div>
+        <div class="toc-group-title with-spacer">마무리 · OUTRO</div>
+        <div class="toc-row"><span class="n">23</span><span class="t">감사 인사</span><span class="pg">23</span></div>
       </div>
-
       <div>
-        <div class="toc-section-title">주요 프로젝트</div>
-        <div class="toc-item"><span class="num">P.01</span><span class="label">AI 워크플로우 기반 개발</span><span class="pg">07—10</span></div>
-        <div class="toc-item"><span class="num">P.02</span><span class="label">프리셋 대시보드 (OBD)</span><span class="pg">11—14</span></div>
-        <div class="toc-item"><span class="num">P.03</span><span class="label">광고 미디에이션 전환</span><span class="pg">15—17</span></div>
-        <div class="toc-item"><span class="num">P.04</span><span class="label">안드로이드 오토 플랫폼 확장</span><span class="pg">18—20</span></div>
-        <div class="toc-item"><span class="num">P.05</span><span class="label">차계부 DB 리뉴얼</span><span class="pg">21—22</span></div>
+        <div class="toc-group-title">주요 프로젝트 · WORK</div>
+        <div class="toc-row feature"><span class="n">01</span><span class="t">AI 워크플로우 기반 개발<span class="d">knot · MCP · 점진 전환</span></span><span class="pg">07–10</span></div>
+        <div class="toc-row"><span class="n">02</span><span class="t">프리셋 대시보드 (OBD)<span class="d">5종 엔진 × 3종 대시보드</span></span><span class="pg">11–14</span></div>
+        <div class="toc-row"><span class="n">03</span><span class="t">광고 미디에이션 전환<span class="d">5개 네트워크 워터폴</span></span><span class="pg">15–17</span></div>
+        <div class="toc-row"><span class="n">04</span><span class="t">안드로이드 오토 확장<span class="d">Car App Library</span></span><span class="pg">18–20</span></div>
+        <div class="toc-row"><span class="n">05</span><span class="t">차계부 DB 리뉴얼<span class="d">정규화 · 마이그레이션</span></span><span class="pg">21–22</span></div>
       </div>
     </div>
   </div>
@@ -551,7 +538,7 @@
       <svg viewBox="0 0 900 230" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrA" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-            <path d="M0,0 L9,5 L0,10 z" fill="#2563EB"/>
+            <path d="M0,0 L9,5 L0,10 z" fill="#4F46E5"/>
           </marker>
         </defs>
         <g font-family="Pretendard, sans-serif">
@@ -565,8 +552,8 @@
           <text x="332" y="118" text-anchor="middle" fill="#18181B" font-size="18" font-weight="700">기능 명세</text>
           <text x="332" y="138" text-anchor="middle" fill="#71717A" font-size="11">동작·범위 정의</text>
 
-          <rect x="455" y="70" width="195" height="90" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="552" y="92" text-anchor="middle" fill="#2563EB" font-size="11" font-weight="700">03</text>
+          <rect x="455" y="70" width="195" height="90" rx="10" fill="#EEF0FE" stroke="#4F46E5"/>
+          <text x="552" y="92" text-anchor="middle" fill="#4F46E5" font-size="11" font-weight="700">03</text>
           <text x="552" y="118" text-anchor="middle" fill="#18181B" font-size="18" font-weight="700">구현</text>
           <text x="552" y="138" text-anchor="middle" fill="#71717A" font-size="11">AI 페어로 작성</text>
 
@@ -575,12 +562,12 @@
           <text x="772" y="118" text-anchor="middle" fill="#18181B" font-size="18" font-weight="700">검증</text>
           <text x="772" y="138" text-anchor="middle" fill="#71717A" font-size="11">빌드·동작 확인</text>
 
-          <line x1="212" y1="115" x2="233" y2="115" stroke="#2563EB" stroke-width="2" marker-end="url(#arrA)"/>
-          <line x1="432" y1="115" x2="453" y2="115" stroke="#2563EB" stroke-width="2" marker-end="url(#arrA)"/>
-          <line x1="652" y1="115" x2="673" y2="115" stroke="#2563EB" stroke-width="2" marker-end="url(#arrA)"/>
+          <line x1="212" y1="115" x2="233" y2="115" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrA)"/>
+          <line x1="432" y1="115" x2="453" y2="115" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrA)"/>
+          <line x1="652" y1="115" x2="673" y2="115" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrA)"/>
 
           <text x="442" y="42" text-anchor="middle" fill="#71717A" font-size="12" font-weight="500">↺ knot 지식 vault · Notion · Figma 를 단계마다 참조</text>
-          <path d="M 112 70 Q 112 25 442 25 Q 772 25 772 70" fill="none" stroke="#2563EB" stroke-dasharray="4 4" opacity="0.45"/>
+          <path d="M 112 70 Q 112 25 442 25 Q 772 25 772 70" fill="none" stroke="#4F46E5" stroke-dasharray="4 4" opacity="0.45"/>
 
           <text x="442" y="200" text-anchor="middle" fill="#A1A1AA" font-size="13">각 단계의 산출물이 다음 단계 입력이 됨</text>
         </g>
@@ -922,7 +909,7 @@
       <svg viewBox="0 0 900 220" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrB" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-            <path d="M0,0 L9,5 L0,10 z" fill="#2563EB"/>
+            <path d="M0,0 L9,5 L0,10 z" fill="#4F46E5"/>
           </marker>
         </defs>
         <g font-family="Pretendard, sans-serif">
@@ -936,13 +923,13 @@
           <text x="222" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">OBD2 · BT</text>
           <text x="222" y="118" text-anchor="middle" fill="#71717A" font-size="10">프로토콜 파싱</text>
 
-          <rect x="310" y="60" width="150" height="70" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="385" y="80" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">스트림</text>
+          <rect x="310" y="60" width="150" height="70" rx="10" fill="#EEF0FE" stroke="#4F46E5"/>
+          <text x="385" y="80" text-anchor="middle" fill="#4F46E5" font-size="10" font-weight="700">스트림</text>
           <text x="385" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">데이터 저장소</text>
           <text x="385" y="118" text-anchor="middle" fill="#71717A" font-size="10">보는 화면 없으면 전송 중단</text>
 
-          <rect x="485" y="60" width="170" height="70" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="570" y="80" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">상태 관리</text>
+          <rect x="485" y="60" width="170" height="70" rx="10" fill="#EEF0FE" stroke="#4F46E5"/>
+          <text x="570" y="80" text-anchor="middle" fill="#4F46E5" font-size="10" font-weight="700">상태 관리</text>
           <text x="570" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">화면별 상태</text>
           <text x="570" y="118" text-anchor="middle" fill="#71717A" font-size="10">항목별 갱신 · 빈도 조절</text>
 
@@ -956,11 +943,11 @@
           <text x="870" y="103" text-anchor="middle" fill="#18181B" font-size="13" font-weight="700">위젯</text>
           <text x="870" y="118" text-anchor="middle" fill="#71717A" font-size="10">게이지</text>
 
-          <line x1="137" y1="92" x2="158" y2="92" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
-          <line x1="287" y1="92" x2="308" y2="92" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
-          <line x1="462" y1="92" x2="483" y2="92" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
-          <line x1="657" y1="92" x2="678" y2="92" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
-          <line x1="822" y1="92" x2="843" y2="92" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
+          <line x1="137" y1="92" x2="158" y2="92" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrB)"/>
+          <line x1="287" y1="92" x2="308" y2="92" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrB)"/>
+          <line x1="462" y1="92" x2="483" y2="92" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrB)"/>
+          <line x1="657" y1="92" x2="678" y2="92" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrB)"/>
+          <line x1="822" y1="92" x2="843" y2="92" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrB)"/>
 
           <rect x="210" y="160" width="490" height="40" rx="8" fill="#F4F4F5" stroke="#D4D4D8"/>
           <text x="232" y="184" fill="#52525B" font-size="11" font-weight="700">설정 중앙 관리</text>
@@ -1146,8 +1133,8 @@
     <div class="proj-section" style="margin-top: 16px;">
       <svg viewBox="0 0 900 220" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
         <g font-family="Pretendard, sans-serif">
-          <rect x="240" y="10" width="420" height="50" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="450" y="32" text-anchor="middle" fill="#2563EB" font-size="11" font-weight="700">Firebase Remote Config · 9개 필드 · 1시간 주기 fetch</text>
+          <rect x="240" y="10" width="420" height="50" rx="10" fill="#EEF0FE" stroke="#4F46E5"/>
+          <text x="450" y="32" text-anchor="middle" fill="#4F46E5" font-size="11" font-weight="700">Firebase Remote Config · 9개 필드 · 1시간 주기 fetch</text>
           <text x="450" y="50" text-anchor="middle" fill="#18181B" font-size="13" font-weight="600">SKIP_DAY · VISIBLE · AD_TYPE · RESTRICTED_COUNTRIES …</text>
 
           <g>
@@ -1157,8 +1144,8 @@
             <text x="87" y="158" text-anchor="middle" fill="#71717A" font-size="10">상시 노출</text>
           </g>
           <g>
-            <rect x="165" y="100" width="135" height="70" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-            <text x="232" y="120" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">매니저 · 02</text>
+            <rect x="165" y="100" width="135" height="70" rx="10" fill="#EEF0FE" stroke="#4F46E5"/>
+            <text x="232" y="120" text-anchor="middle" fill="#4F46E5" font-size="10" font-weight="700">매니저 · 02</text>
             <text x="232" y="142" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">네이티브 (5종)</text>
             <text x="232" y="158" text-anchor="middle" fill="#71717A" font-size="10">병렬 + 10초 타임아웃</text>
           </g>
@@ -1187,12 +1174,12 @@
             <text x="812" y="158" text-anchor="middle" fill="#71717A" font-size="10">팝업형</text>
           </g>
 
-          <line x1="450" y1="60" x2="87" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
-          <line x1="450" y1="60" x2="232" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
-          <line x1="450" y1="60" x2="377" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
-          <line x1="450" y1="60" x2="522" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
-          <line x1="450" y1="60" x2="667" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
-          <line x1="450" y1="60" x2="812" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
+          <line x1="450" y1="60" x2="87" y2="99" stroke="#4F46E5" stroke-dasharray="3 3" opacity="0.4"/>
+          <line x1="450" y1="60" x2="232" y2="99" stroke="#4F46E5" stroke-dasharray="3 3" opacity="0.4"/>
+          <line x1="450" y1="60" x2="377" y2="99" stroke="#4F46E5" stroke-dasharray="3 3" opacity="0.4"/>
+          <line x1="450" y1="60" x2="522" y2="99" stroke="#4F46E5" stroke-dasharray="3 3" opacity="0.4"/>
+          <line x1="450" y1="60" x2="667" y2="99" stroke="#4F46E5" stroke-dasharray="3 3" opacity="0.4"/>
+          <line x1="450" y1="60" x2="812" y2="99" stroke="#4F46E5" stroke-dasharray="3 3" opacity="0.4"/>
 
           <rect x="200" y="190" width="500" height="26" rx="6" fill="#F4F4F5" stroke="#D4D4D8"/>
           <text x="222" y="207" fill="#52525B" font-size="11" font-weight="700">노출 게이트</text>
@@ -1265,15 +1252,15 @@
       <svg viewBox="0 0 900 100" style="width:100%;height:auto;display:block;" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <marker id="arrC" markerWidth="10" markerHeight="10" refX="7" refY="5" orient="auto">
-            <path d="M0,0 L9,5 L0,10 z" fill="#2563EB"/>
+            <path d="M0,0 L9,5 L0,10 z" fill="#4F46E5"/>
           </marker>
         </defs>
         <g font-family="Pretendard, sans-serif">
-          <text x="20" y="22" fill="#2563EB" font-size="11" font-weight="700">▲ 고 eCPM</text>
+          <text x="20" y="22" fill="#4F46E5" font-size="11" font-weight="700">▲ 고 eCPM</text>
           <text x="880" y="22" text-anchor="end" fill="#71717A" font-size="11" font-weight="500">폴백 ▼</text>
 
-          <rect x="20" y="35" width="135" height="45" rx="8" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="87" y="52" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">최우선</text>
+          <rect x="20" y="35" width="135" height="45" rx="8" fill="#EEF0FE" stroke="#4F46E5"/>
+          <text x="87" y="52" text-anchor="middle" fill="#4F46E5" font-size="10" font-weight="700">최우선</text>
           <text x="87" y="69" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">AppLovin</text>
 
           <rect x="175" y="35" width="125" height="45" rx="8" fill="#FFFFFF" stroke="#E7E7E9"/>
@@ -1296,11 +1283,11 @@
           <text x="817" y="52" text-anchor="middle" fill="#52525B" font-size="10" font-weight="700">기반</text>
           <text x="817" y="69" text-anchor="middle" fill="#18181B" font-size="13" font-weight="700">AdMob 미디에이션</text>
 
-          <line x1="157" y1="57" x2="173" y2="57" stroke="#2563EB" stroke-width="2" marker-end="url(#arrC)"/>
-          <line x1="302" y1="57" x2="318" y2="57" stroke="#2563EB" stroke-width="2" marker-end="url(#arrC)"/>
-          <line x1="447" y1="57" x2="463" y2="57" stroke="#2563EB" stroke-width="2" marker-end="url(#arrC)"/>
-          <line x1="592" y1="57" x2="608" y2="57" stroke="#2563EB" stroke-width="2" marker-end="url(#arrC)"/>
-          <line x1="737" y1="57" x2="753" y2="57" stroke="#2563EB" stroke-width="2" marker-end="url(#arrC)"/>
+          <line x1="157" y1="57" x2="173" y2="57" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrC)"/>
+          <line x1="302" y1="57" x2="318" y2="57" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrC)"/>
+          <line x1="447" y1="57" x2="463" y2="57" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrC)"/>
+          <line x1="592" y1="57" x2="608" y2="57" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrC)"/>
+          <line x1="737" y1="57" x2="753" y2="57" stroke="#4F46E5" stroke-width="2" marker-end="url(#arrC)"/>
         </g>
       </svg>
     </div>
