@@ -1,35 +1,37 @@
 /* ============================================================
-   Portfolio — Concept A.v2 : Soft Light Cluster
-   Light base · Warm accent · Rounded · Generous typography
+   Portfolio — Minimal Light
+   White base · Single accent (blue) · Monochrome · Whitespace
    ============================================================ */
 
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ----- Color Tokens — Light & Soft ----- */
+/* ----- Color Tokens — Minimal Light ----- */
 :root {
-  --bg:         #F8F6F2;    /* warm off-white */
-  --bg-page:    #FBFAF7;    /* page surface */
+  --bg:         #FFFFFF;    /* base */
+  --bg-page:    #FFFFFF;    /* page surface */
   --bg-card:    #FFFFFF;    /* clean card */
-  --bg-card-2:  #F1ECE3;    /* second-level card (warm) */
-  --bg-card-3:  #EFE9DD;    /* third-level */
-  --border:     #E6DFD3;    /* warm hairline */
-  --border-2:   #D8CFBF;
+  --bg-card-2:  #F4F4F5;    /* subtle fill */
+  --bg-card-3:  #EFEFF1;    /* third-level */
+  --border:     #E7E7E9;    /* hairline */
+  --border-2:   #D4D4D8;
 
-  --text:       #2A2520;    /* warm soft black */
-  --text-2:     #4A433C;    /* secondary */
-  --text-mute:  #7A7268;    /* tertiary */
-  --text-dim:   #A39C8F;    /* hint */
+  --text:       #18181B;    /* near-black (zinc-900) */
+  --text-2:     #3F3F46;    /* secondary (zinc-700) */
+  --text-mute:  #71717A;    /* tertiary (zinc-500) */
+  --text-dim:   #A1A1AA;    /* hint (zinc-400) */
 
-  /* Brand : softer cyan + warm copper */
-  --cyan:       #0EA5C4;    /* softened from #22D3EE */
-  --cyan-2:     #E4F4F8;    /* cyan tint background */
-  --copper:     #C97A4C;    /* warm secondary — 차량/계기판 톤 */
-  --copper-2:   #FBEFE3;    /* copper tint */
-  --emerald:    #1B9E76;    /* positive */
-  --emerald-2:  #E3F1EB;
-  --amber:      #D89B2C;    /* warning */
-  --rust:       #B5503B;    /* alert */
+  /* Single accent — restrained blue; everything else is monochrome */
+  --cyan:       #2563EB;    /* = accent */
+  --cyan-2:     #EFF4FE;    /* accent tint background */
+  --copper:     #52525B;    /* neutral label tone (was warm) */
+  --copper-2:   #F4F4F5;    /* neutral tint */
+  --emerald:    #2563EB;    /* positive → accent (stay two-tone) */
+  --emerald-2:  #EFF4FE;
+  --amber:      #71717A;    /* warning → neutral */
+  --rust:       #52525B;    /* alert → neutral */
+
+  --accent:     #2563EB;
 
   --page-w:     297mm;
   --page-h:     210mm;
@@ -38,8 +40,8 @@
   --radius-sm:  6px;
   --radius:     10px;
   --radius-lg:  16px;
-  --shadow:     0 1px 2px rgba(42,37,32,0.04), 0 8px 24px rgba(42,37,32,0.05);
-  --shadow-sm:  0 1px 2px rgba(42,37,32,0.05), 0 2px 6px rgba(42,37,32,0.04);
+  --shadow:     0 1px 2px rgba(24,24,27,0.04);
+  --shadow-sm:  0 1px 1px rgba(24,24,27,0.03);
 }
 
 @page { size: A4 landscape; margin: 0; }
@@ -53,7 +55,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #ECE6D9;
+  background: #E4E4E7;
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   font-feature-settings: 'ss01', 'cv11';
   color: var(--text);
@@ -69,7 +71,7 @@ html, body {
   padding: var(--page-pad);
   margin: 18px auto;
   overflow: hidden;
-  box-shadow: 0 8px 40px rgba(42,37,32,0.10);
+  box-shadow: 0 1px 3px rgba(24,24,27,0.08), 0 12px 32px rgba(24,24,27,0.06);
   border-radius: 2px;
 }
 
@@ -148,22 +150,10 @@ html, body {
 /* ============================================================
    Decorative — soft car-domain accents
    ============================================================ */
-.deco-gauge {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0.13;
-}
-.deco-car-silhouette {
-  position: absolute;
-  pointer-events: none;
-  opacity: 0.08;
-}
-.deco-circle {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  opacity: 0.4;
-}
+/* Minimal: decorative car/gauge accents removed */
+.deco-gauge,
+.deco-car-silhouette,
+.deco-circle { display: none !important; }
 
 /* ============================================================
    KPI Card — softer
@@ -204,8 +194,8 @@ html, body {
   font-size: 13px; color: var(--text-mute); margin-top: 8px; line-height: 1.5;
 }
 .kpi-card.kpi-feature {
-  background: linear-gradient(135deg, var(--cyan-2), var(--bg-card));
-  border-color: rgba(14,165,196,0.3);
+  background: var(--cyan-2);
+  border-color: rgba(37,99,235,0.28);
 }
 
 /* ============================================================
@@ -509,8 +499,8 @@ html, body {
 }
 .proj-card .desc { font-size: 12.5px; color: var(--text-mute); line-height: 1.55; }
 .proj-card.feature {
-  background: linear-gradient(135deg, var(--cyan-2), var(--bg-card));
-  border-color: rgba(14,165,196,0.4);
+  background: var(--cyan-2);
+  border-color: rgba(37,99,235,0.35);
 }
 .proj-card.feature .id { color: var(--cyan); }
 
@@ -595,15 +585,15 @@ html, body {
   border-radius: var(--radius); padding: 18px 20px;
   box-shadow: var(--shadow-sm);
 }
-.compare-card.as-is { border-color: rgba(181,80,59,0.3); background: linear-gradient(135deg, #FAEFE8, var(--bg-card)); }
-.compare-card.to-be { border-color: rgba(14,165,196,0.4); background: linear-gradient(135deg, var(--cyan-2), var(--bg-card)); }
+.compare-card.as-is { border-color: var(--border-2); background: var(--bg-card-2); }
+.compare-card.to-be { border-color: rgba(37,99,235,0.35); background: var(--cyan-2); }
 .compare-card .tag {
   display: inline-block;
   font-size: 12px; font-weight: 700;
   padding: 5px 11px; border-radius: 6px; margin-bottom: 11px;
 }
-.compare-card.as-is .tag { color: var(--rust); background: rgba(181,80,59,0.12); }
-.compare-card.to-be .tag { color: var(--cyan); background: rgba(14,165,196,0.12); }
+.compare-card.as-is .tag { color: var(--text-mute); background: rgba(24,24,27,0.06); }
+.compare-card.to-be .tag { color: var(--accent); background: rgba(37,99,235,0.10); }
 .compare-card .name { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
 .compare-card .sub { font-size: 13px; color: var(--text-mute); margin-bottom: 11px; }
 .compare-card .body { font-size: 13.5px; color: var(--text); line-height: 1.65; }
@@ -714,8 +704,8 @@ html, body {
 .screenshot.phone {
   border-radius: 22px;
   padding: 6px;
-  background: #2A2520;
-  border-color: #2A2520;
+  background: #18181B;
+  border-color: #18181B;
 }
 .screenshot.phone img { border-radius: 16px; }
 .screenshot .caption {
@@ -754,13 +744,13 @@ html, body {
   max-height: 95mm;
   width: auto;
   border-radius: 14px;
-  border: 6px solid #2A2520;
+  border: 6px solid #18181B;
   box-shadow: var(--shadow);
 }
 
 .auto-img-box {
   display: flex; align-items: center; justify-content: center;
-  background: #2A2520;
+  background: #18181B;
   border-radius: 10px;
   padding: 8px;
   box-shadow: var(--shadow);
