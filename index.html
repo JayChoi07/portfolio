@@ -156,12 +156,12 @@
       <div class="pillar pillar-copper">
         <div class="num">02</div>
         <div class="title">레거시 현대화</div>
-        <div class="desc">MVC (자바)를 Kotlin·Hilt·Orbit MVI로 점진적·비파괴적으로 전환.</div>
+        <div class="desc">오래된 MVC(Java) 코드를 Kotlin·Hilt·MVVM 구조로 점진적으로 전환.</div>
       </div>
       <div class="pillar pillar-emerald">
         <div class="num">03</div>
         <div class="title">AI 워크플로우</div>
-        <div class="desc">기획→명세→구현→검증 풀 사이클을 AI와 함께 진행하는 방식을 본인 작업 영역에 적용.</div>
+        <div class="desc">요구사항→명세→구현→검증 과정을 AI 도구와 함께 진행하는 작업 방식을 정착.</div>
       </div>
       <div class="pillar pillar-rust">
         <div class="num">04</div>
@@ -228,13 +228,13 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="period">2026.01 — 2026.05  ·  진행 중</div>
-          <div class="title">AI 워크플로우 레거시 아키텍처 현대화</div>
-          <div class="desc">풀 사이클 AI 협업 · MVC(Java) → Kotlin·MVI 점진 전환 · 14종 컨텍스트 문서 구조화</div>
+          <div class="title">AI 워크플로우 기반 개발 · 레거시 현대화</div>
+          <div class="desc">요구사항→명세→구현→검증을 AI 도구와 함께 · MVC(Java) → Kotlin 점진 전환</div>
         </div>
         <div class="timeline-item copper">
           <div class="period">2025.09 — 2025.12</div>
           <div class="title">프리셋 대시보드 (OBD 차량 데이터)</div>
-          <div class="desc">B2B(인포카 비즈) 자산을 B2C에 이식 · 5종 엔진 × 3종 대시보드 · 자가 치유 메커니즘 + 복합키 마이그레이션</div>
+          <div class="desc">B2B(인포카 비즈) 기능을 B2C에 이식 · 5종 엔진 × 3종 대시보드 · 설정 자동 복구 + 데이터 마이그레이션</div>
         </div>
         <div class="timeline-item copper">
           <div class="period">2025.03 — 2025.05</div>
@@ -244,7 +244,7 @@
         <div class="timeline-item copper">
           <div class="period">2024.10 — 2025.02</div>
           <div class="title">안드로이드 오토 플랫폼 확장</div>
-          <div class="desc">Car App Library 신규 · 핸들러 양방향 동기화 · 포어그라운드 서비스로 앱 종료 후 단독 동작 · 11가지 안내 페이지</div>
+          <div class="desc">Car App Library 신규 개발 · 앱-오토 화면 동기화 · 앱 종료 후에도 단독 동작 · 상태별 안내 화면</div>
         </div>
         <div class="timeline-item minor">
           <div class="period">2024.06 — 2024.08</div>
@@ -327,7 +327,7 @@
           <span class="pill primary">Jetpack Compose</span>
           <span class="pill primary">XML 레이아웃</span>
           <span class="pill">Car App Library</span>
-          <span class="pill">반응형 레이아웃</span>
+          <span class="pill">멀티 디바이스 대응</span>
           <span class="pill">데이터 시각화</span>
           <span class="pill">머티리얼 3</span>
         </div>
@@ -403,7 +403,7 @@
         <div class="id">P.02</div>
         <div class="period">2025.09 — 2025.12</div>
         <div class="title">프리셋 대시보드<br/>(OBD 차량 데이터)</div>
-        <div class="desc">B2B 자산의 B2C 이식 · 5종 엔진 × 3종 대시보드</div>
+        <div class="desc">B2B 기능의 B2C 이식 · 5종 엔진 × 3종 대시보드</div>
       </div>
       <div class="proj-card">
         <div class="id">P.03</div>
@@ -415,7 +415,7 @@
         <div class="id">P.04</div>
         <div class="period">2024.10 — 2025.02</div>
         <div class="title">안드로이드 오토<br/>플랫폼 확장</div>
-        <div class="desc">Car App Library 신규 · 양방향 화면 동기화</div>
+        <div class="desc">Car App Library 신규 · 앱-오토 화면 동기화</div>
       </div>
       <div class="proj-card">
         <div class="id">P.05</div>
@@ -457,10 +457,10 @@
         <div class="subtitle">매번 지킨 가치</div>
         <div class="pills">
           <span class="pill">레거시 점진 전환</span>
-          <span class="pill">라이프사이클 인식</span>
-          <span class="pill">단일 진실 공급원</span>
-          <span class="pill">반응형 레이아웃</span>
-          <span class="pill">무손실 마이그레이션</span>
+          <span class="pill">라이프사이클 고려</span>
+          <span class="pill">설정 중앙 관리</span>
+          <span class="pill">멀티 디바이스 대응</span>
+          <span class="pill">데이터 보존 마이그레이션</span>
           <span class="pill primary">사용자 1,000만+</span>
         </div>
       </div>
@@ -826,7 +826,7 @@
     <div class="proj-section" style="margin-top: 14px;">
       <div class="callout">
         <strong>설계 방향 &nbsp;·&nbsp;</strong>
-        단순히 데이터 항목을 늘리기보다는 <em>엔진 타입별 인사이트 큐레이션</em>으로 접근. 디젤 → DPF·환경규제 / EV → 배터리 세부사항으로 사용자에게 의미 있는 데이터 묶음 제공.
+        데이터 항목을 무작정 늘리지 않고, <em>엔진 타입에 맞는 항목만</em> 골라 보여주도록 구성. 디젤은 DPF·배출 관련, 전기차는 배터리 상세처럼 차량마다 필요한 데이터만 묶어서 노출.
       </div>
     </div>
 
@@ -856,7 +856,7 @@
 
   <div class="page-content">
     <div class="section-eyebrow"><span class="bar"></span>3종 대시보드 × 5종 엔진</div>
-    <h1 class="section-title" style="font-size: 32px;">엔진 타입별 인사이트 큐레이션<span class="accent">.</span></h1>
+    <h1 class="section-title" style="font-size: 32px;">엔진 타입별 데이터 구성<span class="accent">.</span></h1>
 
     <div class="proj-section" style="margin-top: 16px;">
       <div class="shot-grid-4">
@@ -893,14 +893,14 @@
 
     <div class="proj-section two-col" style="margin-top: 18px;">
       <div>
-        <div class="proj-section-title"><span class="marker">A</span>사용자 선택형 매핑</div>
+        <div class="proj-section-title"><span class="marker">A</span>사용자 선택형 항목</div>
         <p class="t-body text-mute" style="margin:0 0 6px;">
-          한 의미값(예: "엔진 RPM")에 dataIndex가 여럿일 때 팝업에서 선택.
+          한 항목(예: 엔진 RPM)에 해당하는 센서 값이 여럿일 때 사용자가 직접 선택.
         </p>
         <ul class="bullet-list">
-          <li>RPM → <em>engine_rpm / standard_rpm</em></li>
-          <li>모터 RPM → <em>mcu_motor_speed / rear / front</em></li>
-          <li>TPMS 위치 → 차량별 매핑 재설정</li>
+          <li>RPM 센서가 여러 개인 차량 → 사용자가 선택</li>
+          <li>전기차 모터 RPM(전륜·후륜) 선택</li>
+          <li>타이어 위치(TPMS) 차량별 재설정</li>
         </ul>
       </div>
       <div>
@@ -911,7 +911,7 @@
         <ul class="bullet-list">
           <li>80°C ↔ 176°F (자동)</li>
           <li>25 psi ↔ 1.72 bar (자동)</li>
-          <li>접미사 _p / _t 로 감지</li>
+          <li>온도·압력 항목 자동 인식</li>
         </ul>
       </div>
     </div>
@@ -953,19 +953,19 @@
           <text x="222" y="118" text-anchor="middle" fill="#71717A" font-size="10">프로토콜 파싱</text>
 
           <rect x="310" y="60" width="150" height="70" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="385" y="80" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">SharedFlow</text>
-          <text x="385" y="103" text-anchor="middle" fill="#18181B" font-size="13" font-weight="700">OBDDataRepository</text>
-          <text x="385" y="118" text-anchor="middle" fill="#71717A" font-size="10">구독자 0명일 때 emit 차단</text>
+          <text x="385" y="80" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">스트림</text>
+          <text x="385" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">데이터 저장소</text>
+          <text x="385" y="118" text-anchor="middle" fill="#71717A" font-size="10">보는 화면 없으면 전송 중단</text>
 
           <rect x="485" y="60" width="170" height="70" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
-          <text x="570" y="80" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">동시성 맵</text>
-          <text x="570" y="103" text-anchor="middle" fill="#18181B" font-size="13" font-weight="700">DashboardViewModel</text>
-          <text x="570" y="118" text-anchor="middle" fill="#71717A" font-size="10">키 단위 LiveData · 쓰로틀링</text>
+          <text x="570" y="80" text-anchor="middle" fill="#2563EB" font-size="10" font-weight="700">상태 관리</text>
+          <text x="570" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">화면별 상태</text>
+          <text x="570" y="118" text-anchor="middle" fill="#71717A" font-size="10">항목별 갱신 · 빈도 조절</text>
 
           <rect x="680" y="60" width="140" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
           <text x="750" y="80" text-anchor="middle" fill="#71717A" font-size="10" font-weight="700">라이프사이클</text>
-          <text x="750" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">Fragment</text>
-          <text x="750" y="118" text-anchor="middle" fill="#71717A" font-size="10">observeParameter()</text>
+          <text x="750" y="103" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">화면</text>
+          <text x="750" y="118" text-anchor="middle" fill="#71717A" font-size="10">항목 구독</text>
 
           <rect x="845" y="60" width="50" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
           <text x="870" y="80" text-anchor="middle" fill="#71717A" font-size="10" font-weight="700">렌더</text>
@@ -979,9 +979,9 @@
           <line x1="822" y1="92" x2="843" y2="92" stroke="#2563EB" stroke-width="2" marker-end="url(#arrB)"/>
 
           <rect x="210" y="160" width="490" height="40" rx="8" fill="#F4F4F5" stroke="#D4D4D8"/>
-          <text x="232" y="184" fill="#52525B" font-size="11" font-weight="700">단일 진실 공급원</text>
-          <text x="332" y="184" fill="#18181B" font-size="12" font-weight="600">DashboardConfig.kt (557L)</text>
-          <text x="500" y="184" fill="#71717A" font-size="11">itemId × dataIndex × 단위 × 연료타입 × 임계치</text>
+          <text x="232" y="184" fill="#52525B" font-size="11" font-weight="700">설정 중앙 관리</text>
+          <text x="338" y="184" fill="#18181B" font-size="12" font-weight="600">항목 정의를 한 곳에</text>
+          <text x="470" y="184" fill="#71717A" font-size="11">항목 · 단위 · 연료타입 · 임계치 정의</text>
 
           <line x1="385" y1="160" x2="385" y2="130" stroke="#52525B" stroke-dasharray="3 3" opacity="0.5"/>
           <line x1="570" y1="160" x2="570" y2="130" stroke="#52525B" stroke-dasharray="3 3" opacity="0.5"/>
@@ -991,27 +991,27 @@
 
     <div class="proj-section two-col" style="margin-top: 14px;">
       <div>
-        <div class="proj-section-title"><span class="marker">SSOT</span>DashboardConfig — 단일 진실 공급원</div>
+        <div class="proj-section-title"><span class="marker">설정</span>항목 정의를 한 곳에서 관리</div>
         <p class="t-body text-mute" style="margin:0;">
-          itemId · dataIndexOptions · 기본 단위 · 페이지 · 연료타입 · 기본 임계치를 한 곳에 정의. 신규 항목 추가 시 <em>1파일만 수정</em> — 기존엔 3~4파일 손대야 했음.
+          항목 · 기본 단위 · 연료타입 · 임계치 등을 한 곳에 모아 정의. 새 항목을 추가할 때 <em>한 군데만 수정</em>하면 됨 — 예전엔 서너 군데를 고쳐야 했음.
         </p>
       </div>
       <div>
-        <div class="proj-section-title"><span class="marker">IF</span>IDashboardDataStore — B2C·B2B 통일</div>
+        <div class="proj-section-title"><span class="marker">통합</span>공통 인터페이스로 B2C·B2B 통합</div>
         <p class="t-body text-mute" style="margin:0;">
-          공통 인터페이스(92줄) + 두 구현체. Fragment 코드는 BuildConfig 한 번만 검사 후 동일 API 사용. B2C·B2B 분기를 코드 깊은 곳에서 흡수.
+          공통 인터페이스 하나에 B2C·B2B 두 구현을 둠. 화면 코드는 빌드 종류만 한 번 확인한 뒤 같은 방식으로 사용 — 두 서비스의 차이를 안쪽에서 흡수.
         </p>
       </div>
     </div>
 
     <div class="proj-section" style="margin-top: 14px;">
-      <div class="proj-section-title"><span class="marker">핵심 클래스</span>레이어별 책임 분리</div>
+      <div class="proj-section-title"><span class="marker">구조</span>레이어별 역할</div>
       <table class="effect-table">
-        <thead><tr><th>레이어</th><th>클래스</th><th>책임</th><th>규모</th></tr></thead>
+        <thead><tr><th>레이어</th><th>역할</th></tr></thead>
         <tbody>
-          <tr><td class="metric">설정 · SSOT</td><td class="after">DashboardConfig</td><td class="before">모든 항목 정의 중앙화 (itemId × fuelType × unit × threshold)</td><td class="delta">557 L</td></tr>
-          <tr><td class="metric">저장소 · 공통</td><td class="after">IDashboardDataStore + 2 impl</td><td class="before">인터페이스(92L) + B2C(248L) / B2B(539L) 두 구현</td><td class="delta">879 L</td></tr>
-          <tr><td class="metric">뷰모델</td><td class="after">MOBDDashboardViewModel</td><td class="before">ConcurrentHashMap · LiveData · 자가 치유 SharedFlow</td><td class="delta">237 L</td></tr>
+          <tr><td class="metric">설정</td><td class="before">모든 항목 정의를 한 곳에 모아 중앙 관리</td></tr>
+          <tr><td class="metric">데이터 저장소</td><td class="before">B2C·B2B 공통 인터페이스 + 각 서비스 구현</td></tr>
+          <tr><td class="metric">화면 상태 관리</td><td class="before">항목별 실시간 값 관리 · 동시 접근 안전 처리 · 설정 자동 복구</td></tr>
         </tbody>
       </table>
     </div>
@@ -1032,41 +1032,41 @@
 
   <div class="page-content">
     <div class="section-eyebrow"><span class="bar"></span>핵심 처리와 정량 효과</div>
-    <h1 class="section-title" style="font-size: 36px;">8가지 기술 결정<span class="accent">.</span></h1>
+    <h1 class="section-title" style="font-size: 36px;">주요 기술 처리<span class="accent">.</span></h1>
 
     <div class="proj-section three-col" style="margin-top: 16px;">
       <div class="diagram-box cyan" style="width:100%;">
-        <div class="label">A · 자가 치유</div>
-        <div class="value">키 invalid 자동 복구</div>
-        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">제조사 DB 갱신 후 키가 무효해지면 SharedFlow로 알림 → 자동 재구독. 설정 손실 0건.</div>
+        <div class="label">A · 설정 자동 복구</div>
+        <div class="value">무효 항목 자동 복구</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">제조사 데이터가 갱신돼 기존 설정이 안 맞게 되면 자동으로 다시 연결. 사용자 설정 손실 없음.</div>
       </div>
       <div class="diagram-box cyan" style="width:100%;">
-        <div class="label">B · 복합키 마이그레이션</div>
-        <div class="value">무단절 형식 전환</div>
-        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">옛 data_index → 복합키(system+pid+rule) 자동 변환·저장. 앱 업데이트 시 사용자 설정 손실 0.</div>
+        <div class="label">B · 데이터 마이그레이션</div>
+        <div class="value">설정 형식 자동 전환</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">예전 설정 형식을 새 형식으로 자동 변환·저장. 앱 업데이트 후에도 사용자 설정 유지.</div>
       </div>
       <div class="diagram-box cyan" style="width:100%;">
         <div class="label">C · 임계치 단위 환산</div>
         <div class="value">psi↔bar · °C↔°F</div>
-        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">_p / _t 접미사 감지 → 단위 변경 시 임계치도 자동 환산. 일관성 유지.</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">단위를 바꾸면 임계치 값도 자동으로 함께 환산. 온도·압력 항목 자동 인식.</div>
       </div>
     </div>
 
     <div class="proj-section three-col" style="margin-top: 12px;">
       <div class="diagram-box copper" style="width:100%;">
-        <div class="label">D · 표준 PID 폴백</div>
-        <div class="value">제조사 미보유 대응</div>
-        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">engine_rpm 실패 → standard_rpm 자동 시도. 제조사 데이터 미보유자도 가능 항목 표시.</div>
+        <div class="label">D · 표준값 대체</div>
+        <div class="value">제조사 데이터 미보유 대응</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">제조사 전용 값을 못 읽으면 표준 값으로 자동 대체. 제조사 데이터가 없는 사용자도 가능한 항목 표시.</div>
       </div>
       <div class="diagram-box copper" style="width:100%;">
-        <div class="label">E · 동시성 보장</div>
-        <div class="value">ConcurrentHashMap</div>
-        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">synchronized 없이 레이스 컨디션 방지 · computeIfAbsent로 DB 단일 조회 보장.</div>
+        <div class="label">E · 동시 접근 안전</div>
+        <div class="value">데이터 경쟁 방지</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">여러 곳에서 동시에 접근해도 충돌 없이 처리 · 같은 데이터는 한 번만 조회.</div>
       </div>
       <div class="diagram-box copper" style="width:100%;">
         <div class="label">F · 동적 폰트 크기</div>
-        <div class="value">Jetpack Compose</div>
-        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">부모 너비 측정 → 단위·데이터 폰트 단계적 축소. 폰·태블릿 모두 잘리지 않음.</div>
+        <div class="value">화면에 맞춰 자동 조정</div>
+        <div style="font-size:11px;color:var(--text-mute);margin-top:6px;line-height:1.55;">영역 너비에 맞춰 글자 크기를 단계적으로 축소. 폰·태블릿 모두 잘리지 않음.</div>
       </div>
     </div>
 
@@ -1076,11 +1076,11 @@
         <thead><tr><th>지표</th><th>Before</th><th>After</th><th>효과</th></tr></thead>
         <tbody>
           <tr><td class="metric">바인딩 코드 길이</td><td class="before">464줄</td><td class="after">258줄</td><td class="delta">▼ 44%</td></tr>
-          <tr><td class="metric">신규 항목 추가 비용</td><td class="before">3~4파일</td><td class="after">1파일 (DashboardConfig)</td><td class="delta">▼ 70%+</td></tr>
+          <tr><td class="metric">신규 항목 추가 비용</td><td class="before">서너 군데 수정</td><td class="after">한 곳만 수정</td><td class="delta">▼ 70%+</td></tr>
           <tr><td class="metric">지원 엔진 타입</td><td class="before">2종 (가솔린·디젤)</td><td class="after">5종 (+LPG·EV·수소)</td><td class="delta">▲ 2.5×</td></tr>
           <tr><td class="metric">레이아웃 분기</td><td class="before">1종</td><td class="after">4종 (폰·태블릿 × 가로·세로)</td><td class="delta">▲ 4×</td></tr>
           <tr><td class="metric">사용자 매핑 옵션</td><td class="before">0 (하드코딩)</td><td class="after">항목별 N:1 선택</td><td class="delta">신규</td></tr>
-          <tr><td class="metric">B2C·B2B 코드</td><td class="before">Fragment 2벌</td><td class="after">인터페이스 1벌 + 구현 2벌</td><td class="delta">통일</td></tr>
+          <tr><td class="metric">B2C·B2B 코드</td><td class="before">화면 코드 2벌</td><td class="after">공통 인터페이스 1벌 + 구현 2벌</td><td class="delta">통일</td></tr>
         </tbody>
       </table>
     </div>
@@ -1170,7 +1170,7 @@
             <rect x="20" y="100" width="135" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
             <text x="87" y="120" text-anchor="middle" fill="#52525B" font-size="10" font-weight="700">매니저 · 01</text>
             <text x="87" y="142" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">배너</text>
-            <text x="87" y="158" text-anchor="middle" fill="#71717A" font-size="10">BannerAdManager</text>
+            <text x="87" y="158" text-anchor="middle" fill="#71717A" font-size="10">상시 노출</text>
           </g>
           <g>
             <rect x="165" y="100" width="135" height="70" rx="10" fill="#EFF4FE" stroke="#2563EB"/>
@@ -1182,25 +1182,25 @@
             <rect x="310" y="100" width="135" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
             <text x="377" y="120" text-anchor="middle" fill="#52525B" font-size="10" font-weight="700">매니저 · 03</text>
             <text x="377" y="142" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">전면</text>
-            <text x="377" y="158" text-anchor="middle" fill="#71717A" font-size="10">Interstitial</text>
+            <text x="377" y="158" text-anchor="middle" fill="#71717A" font-size="10">화면 전환 시</text>
           </g>
           <g>
             <rect x="455" y="100" width="135" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
             <text x="522" y="120" text-anchor="middle" fill="#52525B" font-size="10" font-weight="700">매니저 · 04</text>
             <text x="522" y="142" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">앱 시작</text>
-            <text x="522" y="158" text-anchor="middle" fill="#71717A" font-size="10">LifecycleCallbacks</text>
+            <text x="522" y="158" text-anchor="middle" fill="#71717A" font-size="10">앱 진입 시</text>
           </g>
           <g>
             <rect x="600" y="100" width="135" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
             <text x="667" y="120" text-anchor="middle" fill="#52525B" font-size="10" font-weight="700">매니저 · 05</text>
             <text x="667" y="142" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">리워드</text>
-            <text x="667" y="158" text-anchor="middle" fill="#71717A" font-size="10">Reward</text>
+            <text x="667" y="158" text-anchor="middle" fill="#71717A" font-size="10">보상형</text>
           </g>
           <g>
             <rect x="745" y="100" width="135" height="70" rx="10" fill="#FFFFFF" stroke="#E7E7E9"/>
             <text x="812" y="120" text-anchor="middle" fill="#52525B" font-size="10" font-weight="700">매니저 · 06</text>
             <text x="812" y="142" text-anchor="middle" fill="#18181B" font-size="14" font-weight="700">앱 종료 (네이티브)</text>
-            <text x="812" y="158" text-anchor="middle" fill="#71717A" font-size="10">modal style</text>
+            <text x="812" y="158" text-anchor="middle" fill="#71717A" font-size="10">팝업형</text>
           </g>
 
           <line x1="450" y1="60" x2="87" y2="99" stroke="#2563EB" stroke-dasharray="3 3" opacity="0.4"/>
@@ -1212,7 +1212,7 @@
 
           <rect x="200" y="190" width="500" height="26" rx="6" fill="#F4F4F5" stroke="#D4D4D8"/>
           <text x="222" y="207" fill="#52525B" font-size="11" font-weight="700">노출 게이트</text>
-          <text x="295" y="207" fill="#18181B" font-size="11">AdvertisingTerms() — 인포카 여부 · 한국·일본 제외 · 스캐너 연결 · 구독 여부 체크</text>
+          <text x="295" y="207" fill="#18181B" font-size="11">노출 조건 — 인포카 앱 여부 · 한국·일본 제외 · 스캐너 연결 · 구독 여부 체크</text>
         </g>
       </svg>
     </div>
@@ -1377,13 +1377,13 @@
       <div class="left">
         <div class="section-eyebrow"><span class="bar"></span>PROJECT 04</div>
         <h1 class="section-title">안드로이드 오토<br/>플랫폼 확장<span class="accent">.</span></h1>
-        <p class="section-subtitle">Car App Library로 신규 안드로이드 오토 앱 개발. 앱↔오토 양방향 동기화 + 앱 종료 후에도 오토 단독 동작하는 포어그라운드 서비스 구조.</p>
+        <p class="section-subtitle">Car App Library로 신규 안드로이드 오토 앱 개발. 앱과 오토 화면을 동기화하고, 앱을 종료해도 오토가 단독으로 동작하도록 구성.</p>
 
         <div style="margin-top: 14px;" class="three-col">
           <div class="kpi-card kpi-feature">
             <div class="kpi-label"><span class="dot"></span>화면</div>
             <div class="kpi-value" style="font-size:42px;">7<span class="unit">종</span></div>
-            <div class="kpi-sub">메인·연결·대시보드·표준·Empty·데모</div>
+            <div class="kpi-sub">메인·연결·대시보드·표준·안내·데모</div>
           </div>
           <div class="kpi-card kpi-copper">
             <div class="kpi-label"><span class="dot"></span>안내 페이지</div>
@@ -1454,8 +1454,8 @@
   </div>
 
   <div class="page-content">
-    <div class="section-eyebrow"><span class="bar"></span>화면 계층 + 양방향 동기화</div>
-    <h1 class="section-title" style="font-size: 32px;">앱과 오토를 잇는 핸들러<span class="accent">.</span></h1>
+    <div class="section-eyebrow"><span class="bar"></span>화면 구성 + 화면 동기화</div>
+    <h1 class="section-title" style="font-size: 32px;">앱과 오토 화면 연결<span class="accent">.</span></h1>
 
     <div class="proj-section" style="margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
 
@@ -1468,7 +1468,7 @@
             <li><strong>연결 스크린</strong> — 페인 템플릿 (OBD/ECU 상태 + 차량정보 7필드)</li>
             <li><strong>대시보드 스크린</strong> — 리스트 템플릿 (페이지 동적 카운트)</li>
             <li><strong>표준 데이터 스크린</strong> — 페인 템플릿 (실시간 매개변수)</li>
-            <li><strong>Empty 스크린</strong> — 메시지 템플릿 (11가지 상태)</li>
+            <li><strong>안내 스크린</strong> — 메시지 템플릿 (11가지 상태)</li>
             <li><strong>데모 화면 2종</strong> — 스캐너 없이 시연 가능</li>
           </ul>
         </div>
@@ -1481,16 +1481,16 @@
       <!-- 우측: 동일 구조 (텍스트 위쪽 + 이미지 아래쪽 고정) -->
       <div style="display:flex;flex-direction:column;min-height: 95mm;">
         <div style="flex: 1;">
-          <div class="proj-section-title"><span class="marker">양방향</span>핸들러 메시지 패싱</div>
+          <div class="proj-section-title"><span class="marker">동기화</span>앱 ↔ 오토 화면 연동</div>
           <p class="t-body text-mute" style="margin:0 0 12px;">
-            앱과 오토 사이를 <em>핸들러 메시지</em>로 동기화. 메인 루퍼 기반으로 ANR 방지.
+            앱에서 상태가 바뀌면 오토 화면도 함께 갱신되도록 연결. UI 멈춤(ANR) 없이 처리.
           </p>
           <ul class="bullet-list">
-            <li><strong>what = 0</strong> → 연결 스크린 갱신</li>
-            <li><strong>what = 1</strong> → 대시보드 스크린 갱신</li>
-            <li><strong>what = 2</strong> → 표준 데이터 스크린 갱신</li>
-            <li><strong>전역 브릿지</strong> — Status_DataBridge로 CarContext·상태 공유</li>
-            <li><strong>독립 동작</strong> — 앱 종료 후에도 Auto만 단독 실행</li>
+            <li><strong>연결 상태 변경</strong> → 오토 연결 화면 갱신</li>
+            <li><strong>대시보드 변경</strong> → 오토 대시보드 화면 갱신</li>
+            <li><strong>실시간 데이터 변경</strong> → 표준 데이터 화면 갱신</li>
+            <li><strong>상태 공유</strong> — 앱과 오토가 같은 연결·차량 상태를 바라봄</li>
+            <li><strong>독립 동작</strong> — 앱을 종료해도 오토는 단독으로 계속 실행</li>
           </ul>
         </div>
         <div>
@@ -1527,7 +1527,7 @@
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div class="diagram-box" style="width:100%;flex-direction:row;justify-content:space-between;align-items:center;">
             <div><span class="t-mono-sm" style="color:var(--text-dim);font-weight:600;">코드 0</span> &nbsp;<span style="color:var(--text);font-weight:600;">미연결</span></div>
-            <div style="color:var(--text-mute);font-size:11px;">→ Empty 스크린</div>
+            <div style="color:var(--text-mute);font-size:11px;">→ 안내 스크린</div>
           </div>
           <div class="diagram-box copper" style="width:100%;flex-direction:row;justify-content:space-between;align-items:center;">
             <div><span class="t-mono-sm" style="color:var(--amber);font-weight:600;">코드 1</span> &nbsp;<span style="color:var(--text);font-weight:600;">연결 중</span></div>
@@ -1545,7 +1545,7 @@
       </div>
 
       <div>
-        <div class="proj-section-title"><span class="marker">B</span>11개 안내 페이지 (Empty)</div>
+        <div class="proj-section-title"><span class="marker">B</span>11개 안내 페이지</div>
         <p class="t-body text-mute" style="margin:0 0 10px;">상황별 구체적인 가이드로 첫 사용 경험 보호.</p>
         <ul class="bullet-list" style="font-size:12px;">
           <li>오토 권한 미설정 · 위치 권한 필요</li>
@@ -1563,10 +1563,10 @@
     <div class="proj-section" style="margin-top: 18px;">
       <div class="proj-section-title"><span class="marker">포어그라운드</span>앱 종료 후 단독 동작</div>
       <ul class="bullet-list">
-        <li><strong>FOREGROUND_SERVICE_TYPE_LOCATION</strong> — 위치 권한이 있을 때만 사용, 없으면 폴백 경로</li>
-        <li><strong>SecurityException 처리</strong> — API 33+ 권한 제약을 우아하게 회피</li>
-        <li><strong>CarContext 유지</strong> — 메인 앱 종료해도 오토는 계속 데이터 갱신 (배터리 영향 최소화)</li>
-        <li><strong>재진입 시 복원</strong> — 기존 CarContext·대시보드 상태 자동 복원, 사용자 작업 손실 0</li>
+        <li><strong>위치 기반 동작</strong> — 위치 권한이 있을 때만 위치 기반 포그라운드 서비스 사용, 없으면 대체 경로</li>
+        <li><strong>OS 권한 제약 대응</strong> — 최신 안드로이드 권한 정책에 맞춰 예외 상황 안전 처리</li>
+        <li><strong>앱 종료 후 유지</strong> — 메인 앱을 종료해도 오토는 계속 데이터 갱신 (배터리 영향 최소화)</li>
+        <li><strong>재진입 시 복원</strong> — 다시 들어와도 이전 화면·상태 자동 복원, 사용자 작업 손실 없음</li>
       </ul>
     </div>
   </div>
@@ -1614,7 +1614,7 @@
       <div class="kpi-card">
         <div class="kpi-label"><span class="dot"></span>기간</div>
         <div class="kpi-value">9<span class="unit">개월</span></div>
-        <div class="kpi-sub">설계 · 마이그 · 검증 풀 사이클</div>
+        <div class="kpi-sub">설계 · 마이그레이션 · 검증</div>
       </div>
       <div class="kpi-card kpi-copper">
         <div class="kpi-label"><span class="dot"></span>테이블 수</div>
