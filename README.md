@@ -11,4 +11,4 @@
 
 - 010-9376-2966
 - dkwkrhrh07@naver.com
-- github.com/AIMA0719
+- github.com/JayChoi07
