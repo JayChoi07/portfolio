@@ -1,9 +1,10 @@
 /* ============================================================
    Portfolio — V3 "Color Rail + Big Number"
-   Indigo rail · Space Grotesk display · IBM Plex Sans KR body
+   Indigo rail · Space Grotesk display · Nanum Square Round body
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/NanumSquareRound/NanumSquareRound.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root {
   --paper:     #FBFBFA;
@@ -32,8 +33,8 @@
   --emerald: var(--accent); --emerald-2: var(--accent-2);
   --amber: #6B7280;       --rust: #6B7280;
 
-  --font-disp: 'Space Grotesk', 'IBM Plex Sans KR', sans-serif;
-  --font-sans: 'IBM Plex Sans KR', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-disp: 'Space Grotesk', 'Nanum Square Round', sans-serif;
+  --font-sans: 'Nanum Square Round', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
   --page-w: 297mm;
