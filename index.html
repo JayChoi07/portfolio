@@ -304,7 +304,6 @@
           <span class="pill">Hilt</span>
           <span class="pill">Coroutines / Flow</span>
           <span class="pill">레포지토리 패턴</span>
-          <span class="pill">클린 아키텍처</span>
         </div>
       </div>
 
@@ -316,7 +315,7 @@
           <span class="pill primary">XML 레이아웃</span>
           <span class="pill">Car App Library</span>
           <span class="pill">멀티 디바이스 대응</span>
-          <span class="pill">데이터 시각화</span>
+          <span class="pill">게이지·차트 UI</span>
           <span class="pill">머티리얼 3</span>
         </div>
       </div>
@@ -595,20 +594,6 @@
       </div>
     </div>
 
-    <div class="proj-section two-col" style="margin-top: 16px;">
-      <div>
-        <div class="proj-section-title"><span class="marker">A</span>한 흐름으로 연결</div>
-        <p class="t-body text-mute" style="margin:0;">
-          요구사항부터 검증까지 끊기지 않게 이어, 맥락이 단계마다 유지됨. 앞 단계 결과가 다음 단계 입력이 되어 같은 설명을 반복할 필요가 줄어듦.
-        </p>
-      </div>
-      <div>
-        <div class="proj-section-title"><span class="marker">B</span>고치기 전에 영향 범위 확인</div>
-        <p class="t-body text-mute" style="margin:0;">
-          코드를 수정하기 전에 관련된 부분을 함께 살펴, 빠뜨리는 곳이나 사이드이펙트를 줄임. 동작하는 레거시는 그대로 보존.
-        </p>
-      </div>
-    </div>
   </div>
 
   <div class="page-footer"><span>일하는 방식 · AI 워크플로우</span><span class="right">08 / 23</span></div>
@@ -1042,7 +1027,7 @@
       <table class="effect-table">
         <thead><tr><th>지표</th><th>Before</th><th>After</th><th>효과</th></tr></thead>
         <tbody>
-          <tr><td class="metric">신규 항목 추가 비용</td><td class="before">서너 군데 수정</td><td class="after">한 곳만 수정</td><td class="delta">▼ 70%+</td></tr>
+          <tr><td class="metric">신규 항목 추가</td><td class="before">서너 군데 수정</td><td class="after">한 곳만 수정</td><td class="delta">간소화</td></tr>
           <tr><td class="metric">지원 엔진 타입</td><td class="before">2종 (가솔린·디젤)</td><td class="after">5종 (+LPG·EV·수소)</td><td class="delta">▲ 2.5×</td></tr>
           <tr><td class="metric">레이아웃 분기</td><td class="before">1종</td><td class="after">4종 (폰·태블릿 × 가로·세로)</td><td class="delta">▲ 4×</td></tr>
           <tr><td class="metric">사용자 매핑 옵션</td><td class="before">0 (하드코딩)</td><td class="after">항목별 N:1 선택</td><td class="delta">신규</td></tr>
@@ -1093,9 +1078,9 @@
           <div class="kpi-sub">전면 대비 ▼34% — 광고 피로도</div>
         </div>
         <div class="kpi-card kpi-emerald">
-          <div class="kpi-label"><span class="dot"></span>활성 사용자 체류</div>
-          <div class="kpi-value" style="font-size:38px;">38<span class="unit">분</span></div>
-          <div class="kpi-sub">배너 광고 부재 → 지속 수익 0</div>
+          <div class="kpi-label"><span class="dot"></span>상시 노출 배너</div>
+          <div class="kpi-value" style="font-size:38px;">없음</div>
+          <div class="kpi-sub">긴 체류에도 지속 매출로 연결 안 됨</div>
         </div>
       </div>
 
@@ -1291,7 +1276,7 @@
       <p style="font-size:11.5px;color:var(--text-mute);margin:0 0 8px;line-height:1.5;">
         <strong style="color:var(--accent);">본인 기여</strong> · 안드로이드 SDK 통합 · 매니저 구조 · UMP 자동화 · Remote Config 정책 제어 <span style="color:var(--text-dim);">(매출 증가는 정책·사업 결정 등 복합 요인)</span>
       </p>
-      <div class="three-col">
+      <div class="three-col" style="grid-template-columns:repeat(2,1fr);">
         <div class="kpi-card kpi-feature" style="padding:14px 16px 12px;">
           <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>앱내 광고 매출</div>
           <div class="kpi-value" style="font-size:28px;color:var(--cyan);">▲ 475<span class="unit">%</span></div>
@@ -1301,11 +1286,6 @@
           <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>구독·인앱 (Android)</div>
           <div class="kpi-value" style="font-size:28px;color:var(--accent);">▲ 11<span class="unit">%</span></div>
           <div class="kpi-sub" style="font-size:11px;margin-top:5px;">179M원 → 200M원</div>
-        </div>
-        <div class="kpi-card kpi-emerald" style="padding:14px 16px 12px;">
-          <div class="kpi-label" style="margin-bottom:6px;"><span class="dot"></span>일 평균 체류</div>
-          <div class="kpi-value" style="font-size:28px;color:var(--emerald);">▲ 18<span class="unit">%</span></div>
-          <div class="kpi-sub" style="font-size:11px;margin-top:5px;">32분 → 38분 (MAU 1인당)</div>
         </div>
       </div>
     </div>
@@ -1317,8 +1297,8 @@
         <tbody>
           <tr><td class="metric">미디에이션 네트워크</td><td class="before">1개 (AdMob 단일)</td><td class="after">5개 + AdMob 기반</td><td class="delta">▲ 5×</td></tr>
           <tr><td class="metric">광고 단위 ID</td><td class="before">~7개</td><td class="after">12개 세분화</td><td class="delta">▲ 1.7×</td></tr>
-          <tr><td class="metric">정책 변경 속도</td><td class="before">스토어 재배포</td><td class="after">Remote Config 실시간</td><td class="delta">분 단위</td></tr>
-          <tr><td class="metric">한국·일본 광고</td><td class="before">없음 (자체광고만)</td><td class="after">자체 + AdMob 통합</td><td class="delta">+α 수익</td></tr>
+          <tr><td class="metric">정책 변경 속도</td><td class="before">스토어 재배포</td><td class="after">Remote Config 실시간</td><td class="delta">즉시</td></tr>
+          <tr><td class="metric">한국·일본 광고</td><td class="before">없음 (자체광고만)</td><td class="after">자체 + AdMob 통합</td><td class="delta">신규</td></tr>
         </tbody>
       </table>
     </div>
@@ -1352,7 +1332,7 @@
           </div>
           <div class="kpi-card kpi-copper">
             <div class="kpi-label"><span class="dot"></span>안내 페이지</div>
-            <div class="kpi-value" style="font-size:42px;">11<span class="unit">개</span></div>
+            <div class="kpi-value" style="font-size:42px;">8<span class="unit">개</span></div>
             <div class="kpi-sub">권한·연결·구매·다운로드·검색</div>
           </div>
           <div class="kpi-card kpi-emerald">
@@ -1377,7 +1357,7 @@
     <div class="proj-section" style="margin-top: 12px;">
       <div class="callout">
         <strong>정책 제약 인식 &nbsp;·&nbsp;</strong>
-        안드로이드 오토 / 카플레이는 운전 중 안전을 위해 <em>리스트·페인·메시지 템플릿</em> 3종만 허용. 그래픽 위젯·계기판은 사용 불가. → 정보 위계 압축 + 안내 페이지 11종으로 가이드 완성도 보강.
+        안드로이드 오토 / 카플레이는 운전 중 안전을 위해 <em>리스트·페인·메시지 템플릿</em> 3종만 허용. 그래픽 위젯·계기판은 사용 불가. → 정보 위계 압축 + 안내 페이지 8종으로 가이드 완성도 보강.
       </div>
     </div>
 
@@ -1387,7 +1367,7 @@
         <ul class="bullet-list">
           <li><strong>최상위 메뉴</strong> — 연결 · 표준 대시보드 · 제조사 대시보드 (구매 시 노출)</li>
           <li><strong>대시보드 페이지</strong> — 앱 설정 항목과 동기화된 페이지 카운트</li>
-          <li><strong>안내 페이지</strong> — 권한·연결·구매·다운로드 등 11가지 상태별 가이드</li>
+          <li><strong>안내 페이지</strong> — 권한·연결·구매·다운로드 등 8가지 상태별 가이드</li>
         </ul>
       </div>
       <div>
@@ -1433,7 +1413,7 @@
             <li><strong>연결 스크린</strong> — 페인 템플릿 (OBD/ECU 상태 + 차량정보 7필드)</li>
             <li><strong>대시보드 스크린</strong> — 리스트 템플릿 (페이지 동적 카운트)</li>
             <li><strong>표준 데이터 스크린</strong> — 페인 템플릿 (실시간 매개변수)</li>
-            <li><strong>안내 스크린</strong> — 메시지 템플릿 (11가지 상태)</li>
+            <li><strong>안내 스크린</strong> — 메시지 템플릿 (8가지 상태)</li>
             <li><strong>데모 화면 2종</strong> — 스캐너 없이 시연 가능</li>
           </ul>
         </div>
@@ -1481,7 +1461,7 @@
 
   <div class="page-content">
     <div class="section-eyebrow"><span class="bar"></span>상태 머신 + 온보딩</div>
-    <h1 class="section-title" style="font-size: 32px;">상태 코드 + 11개 안내 페이지</h1>
+    <h1 class="section-title" style="font-size: 32px;">상태 코드 + 8개 안내 페이지</h1>
 
     <div class="proj-section two-col" style="margin-top: 16px;">
       <div>
@@ -1510,7 +1490,7 @@
       </div>
 
       <div>
-        <div class="proj-section-title"><span class="marker">B</span>11개 안내 페이지</div>
+        <div class="proj-section-title"><span class="marker">B</span>8개 안내 페이지</div>
         <p class="t-body text-mute" style="margin:0 0 10px;">상황별 구체적인 가이드로 첫 사용 경험 보호.</p>
         <ul class="bullet-list" style="font-size:12px;">
           <li>오토 권한 미설정 · 위치 권한 필요</li>
@@ -1570,7 +1550,7 @@
         <li><strong>단일 테이블의 한계</strong> — car_log 한 테이블에 차량·주유·정비·소모품이 혼재 → 중복·확장 한계</li>
         <li><strong>데이터 보존 요구</strong> — 누적 사용자 데이터를 손실 없이 변환 (1,000만 다운로드 서비스)</li>
         <li><strong>위치 기반 확장</strong> — <em>주유소 API</em> 적용 + 구글 맵 장소 검색 통합</li>
-        <li><strong>데이터 복원 안전망</strong> — <em>복구 API</em> 작업 + 마이그레이션 로직 수정으로 사용자 데이터 보존</li>
+        <li><strong>데이터 보존 안전장치</strong> — 마이그레이션 검증·롤백 경로를 마련해 데이터 유실 없이 전환</li>
         <li><strong>글로벌 단위 대응</strong> — 거리(km/mile), 연비(km/L, MPG), 통화 등 지역별 단위 시스템</li>
       </ul>
     </div>
