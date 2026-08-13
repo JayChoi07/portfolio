@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>최정원 — 안드로이드 엔지니어</title>
+<meta name="description" content="화면을 만들고, 화면 너머를 설계합니다. 1,000만 다운로드 안드로이드 서비스를 만들고 운영하는 엔지니어.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="progressBar" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="주요 섹션">
+  <a href="#top" class="nav-logo mono">JW<span class="acc">.</span></a>
+  <div class="nav-links">
+    <a href="#intro">소개</a>
+    <a href="#career">경력</a>
+    <a href="#stack">기술</a>
+    <a href="#how">일하는 방식</a>
+    <a href="#work">프로젝트</a>
+    <a href="#contact" class="nav-cta">연락처</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="top" class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-inner container">
+    <p class="eyebrow mono hero-eyebrow">CHOI JUNGWON — ANDROID ENGINEER</p>
+    <h1 class="hero-title" aria-label="화면을 만들고, 화면 너머를 설계합니다.">
+      <span class="line">화면을 만들고,</span>
+      <span class="line">화면 <em>너머</em>를 설계합니다.</span>
+    </h1>
+    <p class="hero-sub">4년째 1,000만 다운로드 안드로이드 서비스를 만들고 운영합니다.<br>
+    반복되는 문제를 만나면 도구와 파이프라인을 만듭니다 — 요즘은 AI가 그 방식의 중심에 있습니다.</p>
+    <div class="hero-stats" role="list">
+      <div role="listitem"><strong class="mono">1,000<span class="u">만+</span></strong><small>누적 다운로드 서비스</small></div>
+      <div role="listitem"><strong class="mono" id="expYears">4<span class="u">년</span></strong><small>안드로이드 실무 · 2022.08~</small></div>
+      <div role="listitem"><strong class="mono">4<span class="u">개</span></strong><small>주요 프로젝트</small></div>
+    </div>
+  </div>
+  <a class="scroll-cue mono" href="#intro" aria-label="아래로 스크롤">SCROLL<span class="cue-line"></span></a>
+</header>
+
+<main>
+
+<!-- ============ INTRO ============ -->
+<section id="intro" class="section">
+  <div class="container">
+    <p class="eyebrow mono rv">INTRO</p>
+    <h2 class="rv">빠르게 변하는 기술을<br>실제 업무에 녹여내는 개발자.</h2>
+    <p class="lead rv">1,000만 다운로드 서비스의 사용자 접점부터 운영·유지보수까지 다루며,
+    최근엔 AI로 저의 개발 방식을 새롭게 다듬고 있습니다.</p>
+
+    <div class="bento rv">
+      <div class="tile tile-wide">
+        <span class="tile-label mono">소속 · 직책</span>
+        <strong>(주) 인포카 — 전임 연구원</strong>
+        <span class="tile-sub">infoCar Inc. · 주임 → 전임</span>
+      </div>
+      <div class="tile">
+        <span class="tile-label mono">기간</span>
+        <strong id="expYears2">4년</strong>
+        <span class="tile-sub">2022.08 — 재직중</span>
+      </div>
+      <div class="tile">
+        <span class="tile-label mono">서비스</span>
+        <strong>B2C · B2B</strong>
+        <span class="tile-sub">인포카 · 인포카 비즈</span>
+      </div>
+      <div class="tile tile-wide">
+        <span class="tile-label mono">깊게 판 도메인</span>
+        <strong>OBD2 · 블루투스</strong>
+        <span class="tile-sub">안드로이드 오토 · 광고</span>
+      </div>
+      <div class="tile tile-wide">
+        <span class="tile-label mono">학력</span>
+        <strong>신한대학교</strong>
+        <span class="tile-sub">컴퓨터공학과 졸업</span>
+      </div>
+    </div>
+
+    <div class="cap-grid rv">
+      <div class="cap"><span class="mono acc">사용자 접점</span><p>블루투스 통신·푸시·알림 센터 등 일상 접점 기능 개발·운영.</p></div>
+      <div class="cap"><span class="mono acc">레거시 현대화</span><p>오래된 MVC(Java)를 Kotlin·MVVM으로 점진 전환.</p></div>
+      <div class="cap"><span class="mono acc">AI 워크플로우</span><p>요구사항→명세→구현→검증을 AI 도구와 함께 진행.</p></div>
+      <div class="cap"><span class="mono acc">운영·유지보수</span><p>릴리즈 모니터링·NPE 대응·Play Console 정책·CS 분석.</p></div>
+      <div class="cap"><span class="mono acc">협업·소통</span><p>PM·디자이너·iOS와 스크럼. 기술 제약 공유·조율.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAREER ============ -->
+<section id="career" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow mono rv">CAREER</p>
+    <h2 class="rv">한 회사, 한 서비스를<br>바닥부터 지금까지.</h2>
+    <p class="lead rv">2022.08부터 인포카 안드로이드 — 기능 하나에서 시작해 시스템 전체로.</p>
+
+    <div class="timeline" id="timeline">
+      <div class="tl-spine" aria-hidden="true"><span class="tl-fill"></span></div>
+
+      <article class="tl-item rv is-now">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono acc">2026.07 — 현재 · 운영 중</span>
+        <h3>CS 자동화 칸반보드 (cs-kanban)</h3>
+        <p>하이웍스 크롤링 · Claude 헤드리스 AI 분석 · 답변초안 생성·원클릭 발송 — 사내 서버 상시 운영, 팀 공용 도입.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2026.01 — 현재 · 진행 중</span>
+        <h3>레거시 현대화 (MVC → Kotlin)</h3>
+        <p>동작하는 레거시는 보존하고, 신규·수정 기능부터 Kotlin·MVVM 구조로 점진 전환.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2025.09 — 2025.12</span>
+        <h3>프리셋 대시보드 (OBD 차량 데이터)</h3>
+        <p>B2B 기능을 B2C에 이식 · 5종 엔진 × 3종 대시보드 · 설정 자동 복구 + 데이터 마이그레이션.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2025.03 — 2025.05</span>
+        <h3>광고 미디에이션 전환</h3>
+        <p>단일 AdMob → 5개 네트워크 워터폴 · Remote Config 9개 동적 제어 · 앱내 광고 매출 ▲475% (전사).</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2024.10 — 2025.02</span>
+        <h3>안드로이드 오토 플랫폼 확장</h3>
+        <p>Car App Library 신규 개발 · 앱-오토 화면 동기화 · 앱 종료 후 단독 동작 · 상태별 안내 화면.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2024.06 — 2024.08</span>
+        <h3>본앱 사용성 리뉴얼</h3>
+        <p>차량 등록 방식 리뉴얼 · 다국어 UX 통일 · 주유소·세차장·주차장 검색 · 영수증 API 리팩토링.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2023.07 — 2023.10</span>
+        <h3>앱 핵심 기능 운영</h3>
+        <p>블루투스 통신 · 푸시 · 알림 센터 · 정비 항목 UX/UI 2차 개발 · 차계부+정비 내부 테스트.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2022.10 — 2023.06</span>
+        <h3>차계부 시스템 DB 리뉴얼</h3>
+        <p>단일 테이블 → 정규화 다중 테이블 · 데이터 손실 없이 마이그레이션 · 구글 맵 위치 기반 · 다단위 글로벌.</p>
+      </article>
+      <article class="tl-item rv">
+        <span class="tl-dot"></span>
+        <span class="tl-date mono">2022.08 — 2022.09 · 입사</span>
+        <h3>터미널 프로그램 · OBD 통신 기초</h3>
+        <p>블루투스 connection · 소켓 통신 · UI · 로그 저장. OBD 통신 기초 학습기.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section id="stack" class="section">
+  <div class="container">
+    <p class="eyebrow mono rv">STACK</p>
+    <h2 class="rv">현업 4년의 도구들.</h2>
+    <p class="lead rv">직접 다뤄온 언어·아키텍처·도구. <span class="acc">초록 칩</span>은 주력 기술입니다.</p>
+
+    <div class="stack-grid rv">
+      <div class="card">
+        <h3>언어 · 아키텍처</h3>
+        <p class="card-sub">언어 · 디자인 패턴 · 의존성 주입</p>
+        <div class="chips">
+          <span class="chip chip-acc">Kotlin</span><span class="chip">Java</span>
+          <span class="chip chip-acc">MVVM</span><span class="chip chip-acc">Coroutines / Flow</span>
+          <span class="chip">레포지토리 패턴</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>UI · 디바이스</h3>
+        <p class="card-sub">화면 · 디바이스 확장</p>
+        <div class="chips">
+          <span class="chip chip-acc">Jetpack Compose</span><span class="chip">XML 레이아웃</span>
+          <span class="chip chip-acc">Car App Library</span><span class="chip">멀티 디바이스</span>
+          <span class="chip">게이지·차트 UI</span><span class="chip">머티리얼 3</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>데이터 · 통신</h3>
+        <p class="card-sub">저장소 · 통신 · 비동기</p>
+        <div class="chips">
+          <span class="chip chip-acc">Room (SQLite)</span><span class="chip">DataStore</span>
+          <span class="chip">SharedPreferences</span><span class="chip chip-acc">Firebase Remote Config</span>
+          <span class="chip chip-acc">OBD2</span><span class="chip">Retrofit</span>
+          <span class="chip">StateFlow</span><span class="chip">LiveData</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>AI 활용 · 협업</h3>
+        <p class="card-sub">AI 워크플로우 · 협업 도구</p>
+        <div class="chips">
+          <span class="chip chip-acc">Claude Code</span>
+          <span class="chip">Git</span><span class="chip">슬랙</span>
+          <span class="chip">노션 · 피그마</span><span class="chip">스크럼</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner rv">
+      <div class="banner-head"><h3>광고 · 미디에이션</h3><span class="mono">PROJECT 03 — 5개 네트워크 워터폴 + 실시간 원격 제어</span></div>
+      <div class="chips">
+        <span class="chip">AdMob</span><span class="chip">AppLovin</span><span class="chip">ironSource</span>
+        <span class="chip">Mintegral</span><span class="chip">Pangle</span><span class="chip">Unity Ads</span>
+        <span class="chip">UMP (GDPR/CCPA)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW I WORK ============ -->
+<section id="how" class="section section-alt">
+  <div class="container">
+    <p class="eyebrow mono rv">HOW I WORK</p>
+    <h2 class="rv">AI 워크플로우 기반 개발.</h2>
+    <p class="lead rv">단발성 코드 생성이 아니라, 프로젝트 지식·기획·디자인을 AI가 함께 참조하도록
+    환경을 만들어 일관되게 진행합니다.</p>
+
+    <ol class="steps rv">
+      <li><span class="step-num mono">01</span><h3>요구사항</h3><p>무엇을 · 왜<br>해결할 문제 · 우선순위</p></li>
+      <li><span class="step-num mono">02</span><h3>기능 명세</h3><p>어떻게 동작<br>화면 · 데이터 · 상태</p></li>
+      <li><span class="step-num mono">03</span><h3>구현</h3><p>AI 페어로 작성<br>코드 + 커밋</p></li>
+      <li><span class="step-num mono">04</span><h3>검증</h3><p>빌드·동작 확인<br>주요 시나리오 · 크래시</p></li>
+    </ol>
+    <p class="steps-note rv mono">각 단계의 산출물이 다음 단계의 입력이 됩니다</p>
+
+    <div class="ctx-grid rv">
+      <div class="card"><span class="tile-label mono">지식 그물망</span><h3>옵시디언</h3><p>도메인 용어(OBD2·ECU)·아키텍처·코딩 규칙을 노트로 엮은 지식 그물망. 링크된 맥락을 AI가 근거로 참조.</p></div>
+      <div class="card"><span class="tile-label mono">기획 · 요구사항</span><h3>Notion MCP</h3><p>기획서·작업 맥락·우선순위를 AI가 직접 참조.</p></div>
+      <div class="card"><span class="tile-label mono">디자인</span><h3>Figma MCP</h3><p>디자인 화면·UI 스펙·치수·컴포넌트를 AI가 직접 참조.</p></div>
+    </div>
+
+    <div class="asis rv">
+      <div class="asis-card">
+        <span class="tile-label mono">기존 · AS-IS</span>
+        <h3>MVC (Java)</h3>
+        <p>화면 코드가 로직·데이터를 한꺼번에. 한 곳을 고치면 영향 범위 파악이 어렵고, 상태가 흩어져 테스트도 어려움.</p>
+      </div>
+      <span class="asis-arrow acc" aria-hidden="true">→</span>
+      <div class="asis-card asis-tobe">
+        <span class="tile-label mono">목표 · TO-BE</span>
+        <h3>Kotlin · MVVM</h3>
+        <p>화면은 상태만 그리고 로직·데이터는 분리. 상태 흐름이 한 방향으로 명확해 변경 영향이 잘 보임. 신규부터 적용, 경계에서 연결.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORK INDEX ============ -->
+<section id="work" class="section">
+  <div class="container">
+    <p class="eyebrow mono rv">WORK</p>
+    <h2 class="rv">최신순 4개.</h2>
+    <p class="lead rv">AI 자동화 · 차량 데이터 · 광고 · 오토 — 도메인을 가로지른 작업들.</p>
+
+    <div class="work-grid rv">
+      <a href="#p1" class="work-card work-card-hero">
+        <span class="mono acc">P.01 · 2026.07 — 운영 중</span>
+        <h3>CS 자동화 칸반보드</h3>
+        <p>하이웍스 크롤링 → AI 분석 → 초안 → 발송까지 한 파이프라인.</p>
+      </a>
+      <a href="#p2" class="work-card">
+        <span class="mono">P.02 · 2025.09 — 12</span>
+        <h3>프리셋 대시보드 (OBD)</h3>
+        <p>B2B 기능의 B2C 이식 · 5종 엔진 × 3종 대시보드.</p>
+      </a>
+      <a href="#p3" class="work-card">
+        <span class="mono">P.03 · 2025.03 — 05</span>
+        <h3>광고 미디에이션 전환</h3>
+        <p>단일 AdMob → 5개 네트워크 워터폴 · Remote Config.</p>
+      </a>
+      <a href="#p4" class="work-card">
+        <span class="mono">P.04 · 2024.10 — 2025.02</span>
+        <h3>안드로이드 오토 확장</h3>
+        <p>Car App Library 신규 · 앱-오토 화면 동기화.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ P.01 ============ -->
+<section id="p1" class="section proj proj-flag">
+  <div class="container">
+    <p class="eyebrow mono rv">P.01 · CS 자동화 칸반보드 — CS-KANBAN</p>
+    <h2 class="rv">출근 전에,<br>CS 분석이 끝나 있도록.</h2>
+    <p class="lead rv">매일 아침 개발자들이 하이웍스 공용 메일함을 열어 문의 확인 → 로그 zip 다운로드 → 대조 분석 →
+    필요하면 IDE로 코드 추적까지 반복했습니다. 이 수동 루틴 전체를 자동화하기로 하고 —
+    수집부터 AI 진단·답변초안·발송까지 이어지는 파이프라인을 직접 설계·구축해 팀 업무에 연결했습니다.</p>
+
+    <div class="table rv" role="table" aria-label="수동 루틴과 파이프라인 비교">
+      <div class="tr th" role="row"><span>단계</span><span>Before · 수동</span><span>After · 파이프라인</span><span>효과</span></div>
+      <div class="tr" role="row"><span>문의 확인</span><span class="mut">메일함 수동 확인</span><span>20분 주기 자동 수집 · 칸반 카드화</span><span class="acc mono">무인화</span></div>
+      <div class="tr" role="row"><span>로그 분석</span><span class="mut">zip 수동 다운로드·대조</span><span>자동 해제·파싱 · 개인정보 마스킹</span><span class="acc mono">자동</span></div>
+      <div class="tr" role="row"><span>원인 진단</span><span class="mut">IDE 열어 코드 추적</span><span>AI가 사내 위키·앱 코드 교차검증</span><span class="acc mono">자동</span></div>
+      <div class="tr" role="row"><span>답변 작성</span><span class="mut">백지에서 작성</span><span>근거 인용된 한국어 초안 자동 생성</span><span class="acc mono">검토만</span></div>
+      <div class="tr" role="row"><span>발송</span><span class="mut">초안 복사 → 수동 발송</span><span>보드에서 원클릭 발송 · 이중 발송 방지</span><span class="acc mono">원클릭</span></div>
+    </div>
+
+    <div class="diagram rv">
+      <p class="mono diagram-cap">시스템 아키텍처 — 문의 수집부터 검토·발송까지</p>
+      <svg id="pipeline" viewBox="0 0 1160 448" role="img" aria-label="cs-kanban 파이프라인 — 하이웍스 메일함에서 자동 수집, AI 진단, 답변 초안, 담당자 검토를 거쳐 원클릭 발송이 메일함으로 돌아가는 닫힌 루프" style="width:100%; height:auto; display:block; font-family:inherit;">
+        <defs>
+          <marker id="csArrF" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="rgba(233,236,242,.5)"/></marker>
+          <marker id="csArrB" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#3ddc84"/></marker>
+        </defs>
+
+        <g class="dg" id="dg-zone">
+          <rect x="24" y="52" width="816" height="340" rx="16" fill="rgba(233,236,242,.02)" stroke="rgba(233,236,242,.22)" stroke-dasharray="6 5"/>
+          <text x="48" y="84" font-size="12" fill="rgba(233,236,242,.5)" letter-spacing="1.5" font-weight="600">사내 서버 · 무인 동작 — 20분 주기</text>
+        </g>
+
+        <g class="dg" id="dg-a">
+          <rect x="52" y="104" width="172" height="132" rx="14" fill="rgba(233,236,242,.05)" stroke="rgba(233,236,242,.18)"/>
+          <rect x="120" y="118" width="36" height="36" rx="10" fill="rgba(61,220,132,.14)"/>
+          <svg x="128" y="126" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddc84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <text x="138" y="180" font-size="15.5" font-weight="600" fill="#e9ecf2" text-anchor="middle">하이웍스 메일함</text>
+          <text x="138" y="203" font-size="12" fill="rgba(233,236,242,.55)" text-anchor="middle">고객 문의 · 로그 zip</text>
+        </g>
+
+        <line class="dg" x1="224" y1="170" x2="246" y2="170" stroke="rgba(233,236,242,.5)" stroke-width="1.5" marker-end="url(#csArrF)"/>
+
+        <g class="dg" id="dg-b">
+          <rect x="252" y="104" width="172" height="132" rx="14" fill="rgba(233,236,242,.05)" stroke="rgba(233,236,242,.18)"/>
+          <rect x="320" y="118" width="36" height="36" rx="10" fill="rgba(61,220,132,.14)"/>
+          <svg x="328" y="126" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddc84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+          <text x="338" y="180" font-size="15.5" font-weight="600" fill="#e9ecf2" text-anchor="middle">자동 수집</text>
+          <text x="338" y="203" font-size="12" fill="rgba(233,236,242,.55)" text-anchor="middle">미답변 감지 · 로그 파싱</text>
+        </g>
+
+        <line class="dg" x1="424" y1="170" x2="446" y2="170" stroke="rgba(233,236,242,.5)" stroke-width="1.5" marker-end="url(#csArrF)"/>
+
+        <g class="dg" id="dg-c">
+          <rect x="452" y="104" width="172" height="132" rx="14" fill="rgba(61,220,132,.08)" stroke="#3ddc84" stroke-width="1.5"/>
+          <rect x="520" y="118" width="36" height="36" rx="10" fill="#3ddc84"/>
+          <svg x="528" y="126" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#07110b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+          <text x="538" y="180" font-size="15.5" font-weight="600" fill="#e9ecf2" text-anchor="middle">AI 진단</text>
+          <text x="538" y="203" font-size="12" fill="rgba(233,236,242,.65)" text-anchor="middle">Claude · 원인 분석</text>
+        </g>
+
+        <line class="dg" x1="624" y1="170" x2="644" y2="170" stroke="rgba(233,236,242,.5)" stroke-width="1.5" marker-end="url(#csArrF)"/>
+
+        <g class="dg" id="dg-d">
+          <rect x="648" y="104" width="172" height="132" rx="14" fill="rgba(233,236,242,.05)" stroke="rgba(233,236,242,.18)"/>
+          <rect x="716" y="118" width="36" height="36" rx="10" fill="rgba(61,220,132,.14)"/>
+          <svg x="724" y="126" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3ddc84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          <text x="734" y="180" font-size="15.5" font-weight="600" fill="#e9ecf2" text-anchor="middle">답변 초안</text>
+          <text x="734" y="203" font-size="12" fill="rgba(233,236,242,.55)" text-anchor="middle">한국어 · 근거 인용</text>
+        </g>
+
+        <g class="dg" id="dg-know">
+          <line x1="467" y1="284" x2="514" y2="242" stroke="#3ddc84" stroke-width="1.5" marker-end="url(#csArrB)"/>
+          <line x1="662" y1="284" x2="560" y2="242" stroke="#3ddc84" stroke-width="1.5" marker-end="url(#csArrB)"/>
+          <text x="570" y="266" font-size="12" fill="#3ddc84" text-anchor="middle" font-weight="600">검색 · 교차검증</text>
+          <rect x="372" y="286" width="190" height="62" rx="12" fill="rgba(233,236,242,.04)" stroke="rgba(233,236,242,.2)"/>
+          <svg x="390" y="308" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3ddc84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v16"/><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/></svg>
+          <text x="416" y="312" font-size="13.5" font-weight="600" fill="#e9ecf2">사내 위키</text>
+          <text x="416" y="331" font-size="11.5" fill="rgba(233,236,242,.55)">CS 정책 · 진단 규칙</text>
+          <rect x="582" y="286" width="186" height="62" rx="12" fill="rgba(233,236,242,.04)" stroke="rgba(233,236,242,.2)"/>
+          <svg x="600" y="308" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3ddc84" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+          <text x="626" y="312" font-size="13.5" font-weight="600" fill="#e9ecf2">앱 소스 코드</text>
+          <text x="626" y="331" font-size="11.5" fill="rgba(233,236,242,.55)">iOS·Android 동작 확인</text>
+        </g>
+
+        <g class="dg" id="dg-e">
+          <line x1="820" y1="170" x2="884" y2="170" stroke="rgba(233,236,242,.5)" stroke-width="1.5" marker-end="url(#csArrF)"/>
+          <text x="852" y="156" font-size="11.5" fill="rgba(233,236,242,.5)" text-anchor="middle">초안 전달</text>
+          <rect x="888" y="104" width="220" height="132" rx="14" fill="#0f5132"/>
+          <rect x="980" y="118" width="36" height="36" rx="10" fill="rgba(255,255,255,.16)"/>
+          <svg x="988" y="126" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 11 2 2 4-4"/><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          <text x="998" y="180" font-size="15.5" font-weight="600" fill="#ffffff" text-anchor="middle">담당자 — 사람</text>
+          <text x="998" y="203" font-size="12" fill="rgba(255,255,255,.85)" text-anchor="middle">검토 후 원클릭 발송</text>
+        </g>
+
+        <g class="dg" id="dg-loop">
+          <polyline points="998,236 998,414 138,414 138,242" fill="none" stroke="rgba(233,236,242,.5)" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#csArrF)"/>
+          <text x="568" y="438" font-size="11.5" fill="rgba(233,236,242,.55)" text-anchor="middle">원클릭 발송 — 보드 서버가 하이웍스 API로 답장 발송 · 다음 수집이 S(우리 발신)로 감지해 카드 자동 완료</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="pillar-grid rv">
+      <div class="card"><span class="tile-label mono">01 · 수집</span><h3>하이웍스 API 리버스 크롤링</h3><p>DOM 스크래핑 대신 내부 JSON:API를 정찰·재현. 브라우저 없이 세션만 재사용해 수집하고, 대화 단위 시간순 판별로 미답변 문의를 가려냅니다.</p></div>
+      <div class="card"><span class="tile-label mono">02 · 분석</span><h3>Agentic RAG — 벡터 DB 없이</h3><p>직접 구축한 사내 위키(진단 규율·정책)를 Claude 헤드리스가 검색하고, 앱 코드 레포와 교차검증. 근거는 페이지 단위로 인용되고, 지식 갱신은 git pull이 전부입니다.</p></div>
+      <div class="card"><span class="tile-label mono">03 · 운영</span><h3>사내 서버 무인 가동</h3><p>테일넷 Ubuntu 서버에 systemd 상시 서비스로 배포. 수집→분석→초안이 무인으로 이어지고, 사람은 검토와 발송 승인만 합니다.</p></div>
+    </div>
+
+    <div class="stat-row rv">
+      <div class="stat"><strong class="mono">20분</strong><small>무인 수집 주기</small></div>
+      <div class="stat"><strong class="mono">6단계</strong><small>칸반 상태 흐름</small></div>
+      <div class="stat"><strong class="mono">21건</strong><small>설계 결정 문서 (ADR)</small></div>
+    </div>
+
+    <div class="why rv">
+      <span class="tile-label mono">WHY</span>
+      <h3>앱을 만드는 것을 넘어, 팀의 업무 시스템을 설계.</h3>
+      <p>도메인 지식으로 문제를 정의하고, AI를 오케스트레이션해 반복 업무를 시스템으로 대체했습니다.
+      안드로이드 앱 코드 밖에서도 — 크롤러 · AI 파이프라인 · 서버 운영까지 스스로 설계·구축·운영합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ P.02 ============ -->
+<section id="p2" class="section proj section-alt">
+  <div class="container">
+    <p class="eyebrow mono rv">P.02 · 프리셋 대시보드 (OBD)</p>
+    <h2 class="rv">차량마다 필요한 데이터만.</h2>
+    <p class="lead rv">B2B(인포카 비즈) 자산을 B2C에 이식·확장하면서, 하드코딩된 센서 매핑을
+    사용자 선택형 + 엔진 타입별 5종 프리셋으로 재설계.</p>
+
+    <div class="stat-row rv">
+      <div class="stat"><strong class="mono">5종</strong><small>엔진 타입</small></div>
+      <div class="stat"><strong class="mono">3종</strong><small>대시보드</small></div>
+      <div class="stat"><strong class="mono">4종</strong><small>레이아웃</small></div>
+    </div>
+
+    <div class="phone-grid rv">
+      <figure><div class="phone"><img src="assets/img/preset-driving.png" alt="주행 대시보드 — 속도·RPM·온도" loading="lazy"></div><figcaption class="mono">주행 · 속도·RPM·온도</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/preset-tpms.png" alt="TPMS 대시보드 — 4륜 압력·온도" loading="lazy"></div><figcaption class="mono">TPMS · 4륜 압력·온도</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/preset-battery.png" alt="배터리 대시보드 — SOC·전압·SOH" loading="lazy"></div><figcaption class="mono">배터리 · SOC·전압·SOH</figcaption></figure>
+      <figure><div class="phone"><img src="assets/img/preset-subbattery.png" alt="서브 배터리 대시보드 — 셀 편차" loading="lazy"></div><figcaption class="mono">서브 배터리 · 셀 편차</figcaption></figure>
+    </div>
+
+    <div class="table rv" role="table" aria-label="프리셋 대시보드 개선 지표">
+      <div class="tr th" role="row"><span>지표</span><span>Before</span><span>After</span><span>효과</span></div>
+      <div class="tr" role="row"><span>신규 항목 추가</span><span class="mut">서너 군데 수정</span><span>한 곳만 수정</span><span class="acc mono">간소화</span></div>
+      <div class="tr" role="row"><span>지원 엔진 타입</span><span class="mut">2종</span><span>5종</span><span class="acc mono">▲ 2.5×</span></div>
+      <div class="tr" role="row"><span>레이아웃 분기</span><span class="mut">1종</span><span>4종</span><span class="acc mono">▲ 4×</span></div>
+      <div class="tr" role="row"><span>사용자 매핑 옵션</span><span class="mut">0 (하드코딩)</span><span>항목별 N:1 선택</span><span class="acc mono">신규</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ P.03 ============ -->
+<section id="p3" class="section proj">
+  <div class="container">
+    <p class="eyebrow mono rv">P.03 · 광고 미디에이션 전환</p>
+    <h2 class="rv">배포 없이, 실시간으로<br>광고 정책을.</h2>
+    <p class="lead rv">단일 AdMob → 5개 네트워크 워터폴 미디에이션. Firebase Remote Config 9개 항목으로
+    무배포 실시간 정책 제어.</p>
+
+    <div class="rev-grid rv">
+      <div class="rev-card rev-acc">
+        <span class="tile-label mono">앱내 광고 매출 (Android+iOS 합산)</span>
+        <strong class="mono">▲ 475%</strong>
+        <span class="tile-sub">6.7M원 → 39.1M원 · 회사 전체 지표</span>
+      </div>
+      <div class="rev-card">
+        <span class="tile-label mono">구독·인앱 (Android)</span>
+        <strong class="mono">▲ 11%</strong>
+        <span class="tile-sub">179M원 → 200M원</span>
+      </div>
+    </div>
+    <p class="fineprint rv">본인 기여 · 안드로이드 SDK 통합 · 매니저 구조 · UMP 자동화 · Remote Config 정책 제어
+    (매출 증가는 정책·사업 결정 등 복합 요인).</p>
+
+    <div class="waterfall rv" aria-label="eCPM 워터폴 순서">
+      <div class="wf"><span class="mono acc">최우선</span><strong>AppLovin</strong></div>
+      <span class="wf-sep mono" aria-hidden="true">›</span>
+      <div class="wf"><span class="mono">폴백 1</span><strong>ironSource</strong></div>
+      <span class="wf-sep mono" aria-hidden="true">›</span>
+      <div class="wf"><span class="mono">폴백 2</span><strong>Mintegral</strong></div>
+      <span class="wf-sep mono" aria-hidden="true">›</span>
+      <div class="wf"><span class="mono">폴백 3</span><strong>Pangle</strong></div>
+      <span class="wf-sep mono" aria-hidden="true">›</span>
+      <div class="wf"><span class="mono">폴백 4</span><strong>Unity Ads</strong></div>
+    </div>
+
+    <div class="table rv" role="table" aria-label="광고 미디에이션 개선 지표">
+      <div class="tr th" role="row"><span>지표</span><span>Before</span><span>After</span><span>효과</span></div>
+      <div class="tr" role="row"><span>미디에이션 네트워크</span><span class="mut">1개</span><span>5개 + AdMob</span><span class="acc mono">▲ 5×</span></div>
+      <div class="tr" role="row"><span>광고 단위 ID</span><span class="mut">~7개</span><span>12개 세분화</span><span class="acc mono">▲ 1.7×</span></div>
+      <div class="tr" role="row"><span>정책 변경 속도</span><span class="mut">스토어 재배포</span><span>Remote Config 실시간</span><span class="acc mono">즉시</span></div>
+      <div class="tr" role="row"><span>한국·일본 광고</span><span class="mut">없음</span><span>자체 + AdMob 통합</span><span class="acc mono">신규</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ P.04 ============ -->
+<section id="p4" class="section proj section-alt">
+  <div class="container">
+    <p class="eyebrow mono rv">P.04 · 안드로이드 오토 플랫폼 확장</p>
+    <h2 class="rv">앱을 꺼도, 오토는 계속.</h2>
+    <p class="lead rv">Car App Library로 신규 안드로이드 오토 앱 개발. 앱과 오토 화면을 동기화하고,
+    앱을 종료해도 오토가 단독으로 동작하도록 구성.</p>
+
+    <div class="auto-grid rv">
+      <figure><div class="auto-shot"><img src="assets/img/auto-main.png" alt="오토 메인 화면" loading="lazy"></div><figcaption class="mono">메인 — 연결 · 표준 · 제조사 대시보드</figcaption></figure>
+      <figure><div class="auto-shot"><img src="assets/img/auto-dashboard.png" alt="오토 표준 대시보드" loading="lazy"></div><figcaption class="mono">표준 대시보드 — 실시간 매개변수</figcaption></figure>
+      <figure><div class="auto-shot"><img src="assets/img/auto-connect.png" alt="오토 연결 화면" loading="lazy"></div><figcaption class="mono">연결 — 스캐너·ECU 상태</figcaption></figure>
+    </div>
+
+    <div class="note rv">
+      <strong>정책 제약 인식</strong> — 안드로이드 오토/카플레이는 운전 중 안전을 위해 리스트·페인·메시지
+      템플릿 3종만 허용. 그래픽 위젯·계기판은 사용 불가. → 정보 위계를 압축하고 안내 페이지 8종으로
+      가이드 완성도를 보강.
+    </div>
+
+    <div class="auto-cols rv">
+      <div>
+        <h3 class="auto-h">연결 상태 머신 (0–3)</h3>
+        <p class="card-sub">OBD·ECU 두 채널의 상태를 코드로 명확히. 둘 다 2일 때만 데이터 표시.</p>
+        <div class="sm-list">
+          <div class="sm"><span class="sm-n mono">0</span>미연결<span class="sm-r mono mut">→ 안내 스크린</span></div>
+          <div class="sm"><span class="sm-n mono">1</span>연결 중<span class="sm-r mono mut">→ 스피너 표시</span></div>
+          <div class="sm sm-on"><span class="sm-n mono">2</span>연결 완료<span class="sm-r mono acc">→ 데이터 표시</span></div>
+          <div class="sm"><span class="sm-n mono">3</span>실패<span class="sm-r mono mut">→ 오류 안내</span></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="auto-h">규모</h3>
+        <div class="mini-stats">
+          <div class="stat"><strong class="mono">7종</strong><small>화면 — 메인·연결·대시보드·표준·안내·데모</small></div>
+          <div class="stat"><strong class="mono">8개</strong><small>안내 페이지 — 권한·연결·구매·다운로드</small></div>
+          <div class="stat"><strong class="mono">31개</strong><small>OBD 매개변수 — 표준 · 데모 시뮬레이션</small></div>
+          <div class="stat"><strong class="mono">단독</strong><small>앱 종료 후에도 오토 단독 동작</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<footer id="contact" class="section contact">
+  <div class="container">
+    <p class="eyebrow mono rv">CONTACT</p>
+    <h2 class="contact-title rv">읽어주셔서<br>감사합니다.</h2>
+    <p class="lead rv">다음 4년을 함께할 팀을 찾고 있습니다.</p>
+    <div class="contact-grid rv">
+      <a href="tel:01093762966"><span class="tile-label mono">연락처</span><strong class="mono">010-9376-2966</strong></a>
+      <a href="mailto:dkwkrhrh07@naver.com"><span class="tile-label mono">이메일</span><strong class="mono">dkwkrhrh07@naver.com</strong></a>
+      <a href="https://github.com/JayChoi07" target="_blank" rel="noopener"><span class="tile-label mono">깃허브</span><strong class="mono">github.com/JayChoi07</strong></a>
+    </div>
+    <div class="foot rv">
+      <span class="mono">최정원 · ANDROID ENGINEER</span>
+      <span class="mono">PORTFOLIO · 2026</span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="js/network.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
