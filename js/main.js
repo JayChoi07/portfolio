@@ -71,48 +71,15 @@
     scrollTrigger: { trigger: '#timeline', start: 'top 70%', end: 'bottom 55%', scrub: 0.4 },
   });
 
-  // ── P.01 파이프라인 다이어그램 — 스크롤 핀 스토리텔링
-  //    화면을 고정한 채 스크롤 진행도가 파이프라인 조립 순서를 재생한다(역스크롤 = 되감기).
-  //    좁은 화면에서는 핀 없이 순차 등장으로 폴백.
+  // ── P.01 파이프라인 다이어그램 — 흐름 순서대로 조립
   const dgEls = gsap.utils.toArray('#pipeline .dg');
   if (dgEls.length) {
-    const lines = gsap.utils.toArray('#pipeline > line.dg');
-    const stages = [
-      '#dg-zone',        // 무인 동작 경계
-      '#dg-a',           // 하이웍스 메일함
-      lines[0], '#dg-b', // → 자동 수집
-      lines[1], '#dg-c', // → AI 진단
-      '#dg-know',        // 위키·앱 코드 교차검증
-      lines[2], '#dg-d', // → 답변 초안
-      '#dg-e',           // → 담당자 검토
-      '#dg-loop',        // 원클릭 발송 루프 완성
-    ];
-    const groups = stages.filter((s) => typeof s === 'string');
     gsap.set(dgEls, { opacity: 0 });
-    gsap.set(groups, { y: 16 });
-
-    if (window.matchMedia('(min-width: 900px)').matches) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.diagram',
-          start: 'top 16%',
-          end: '+=1500',
-          pin: true,
-          scrub: 0.4,
-          anticipatePin: 1,
-        },
-      });
-      stages.forEach((s) => {
-        tl.to(s, { opacity: 1, y: 0, duration: 1, ease: 'none' }, '>-0.25');
-      });
-      tl.to({}, { duration: 1.2 }); // 완성된 그림을 잠시 감상할 여백
-    } else {
-      ScrollTrigger.create({
-        trigger: '#pipeline',
-        start: 'top 78%',
-        once: true,
-        onEnter: () => gsap.to(stages, { opacity: 1, y: 0, duration: 0.55, stagger: 0.2, ease: 'power2.out' }),
-      });
-    }
+    ScrollTrigger.create({
+      trigger: '#pipeline',
+      start: 'top 78%',
+      once: true,
+      onEnter: () => gsap.to(dgEls, { opacity: 1, duration: 0.55, stagger: 0.22, ease: 'power2.out' }),
+    });
   }
 })();
