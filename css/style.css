@@ -250,6 +250,7 @@ h2 {
 
 .diagram { margin-bottom: 48px; }
 .diagram-cap { font-size: 12px; color: var(--mut); letter-spacing: 0.12em; margin-bottom: 20px; }
+.diagram-hint { color: var(--acc); opacity: 0.8; }
 
 .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 16px; }
 .pillar-grid h3 { margin-top: 10px; font-size: 17px; }
