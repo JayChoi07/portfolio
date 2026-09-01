@@ -261,6 +261,9 @@ body { word-break: keep-all; overflow-wrap: break-word; }
 .asis-card p { font-size: 14px; color: var(--mut); line-height: 1.6; }
 .asis-arrow { display: flex; align-items: center; font-size: 26px; }
 .asis-tobe { background: var(--green-deep); border-color: transparent; }
+/* h3는 --ink를 상속한다. 다크에선 밝은 잉크라 괜찮았지만 라이트 전환 후
+   #14181F가 딥그린 위에 얹혀 1.90:1이 됐다 — 딥그린 카드 제목은 흰색으로 고정 */
+.asis-tobe h3, .work-card-hero h3, .why h3 { color: #fff; }
 .asis-tobe .tile-label, .asis-tobe p { color: rgba(255, 255, 255, 0.75); }
 
 /* ============ Work index ============ */

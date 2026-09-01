@@ -28,6 +28,20 @@
     let clone = null;
     let opener = null;
     let savedY = 0;
+    let natural = null; // 리사이즈 때 다시 맞추려면 원본 치수가 필요하다
+
+    function inertTargets() {
+      return [document.querySelector('.nav'), document.getElementById('smooth-wrapper')].filter(Boolean);
+    }
+
+    // 확대 크기는 뷰포트 기준이라 창이 바뀌면 다시 계산해야 한다
+    function fitClone() {
+      if (!clone || !natural) return;
+      const s = Math.min(Math.min(window.innerWidth * 0.92, 1100) / natural.w, window.innerHeight * 0.84 / natural.h);
+      clone.style.width = Math.round(natural.w * s) + 'px';
+      clone.style.height = Math.round(natural.h * s) + 'px';
+    }
+    window.addEventListener('resize', fitClone);
 
     document.querySelectorAll('.phone, .auto-shot').forEach((frame) => {
       const img = frame.querySelector('img');
@@ -48,9 +62,21 @@
       const figcap = frame.parentElement && frame.parentElement.querySelector('figcaption');
       cap.textContent = figcap ? figcap.textContent : (img.alt || '');
 
-      // 배경이 스크롤되면 닫을 때 썸네일 좌표가 어긋나므로 멈춰둔다
+      // 배경이 스크롤되면 닫을 때 썸네일 좌표가 어긋나므로 멈춰둔다.
+      // smoother가 없을 때(모션 끔·로드 실패)도 잠가야 해서 네이티브 잠금을 항상 건다
       const sm = typeof ScrollSmoother !== 'undefined' ? ScrollSmoother.get() : null;
-      if (sm) { savedY = sm.scrollTop(); sm.paused(true); }
+      savedY = sm ? sm.scrollTop() : window.scrollY;
+      if (sm) sm.paused(true);
+      else document.documentElement.style.overflow = 'hidden';
+
+      // 배경으로 탭이 빠져나가지 않게 격리 (aria-modal만으론 포커스가 안 갇힌다)
+      inertTargets().forEach((el) => { el.inert = true; });
+
+      // 닫기 트윈을 killTweensOf로 죽이면 onComplete가 안 불려 이전 복제본이 남는다
+      box.querySelectorAll('img').forEach((old) => {
+        if (typeof gsap !== 'undefined') gsap.killTweensOf(old);
+        old.remove();
+      });
 
       clone = img.cloneNode(true);
       clone.removeAttribute('loading');
@@ -65,12 +91,14 @@
       // 아직 디코딩 전일 때 naturalWidth가 0이라 0x0으로 접힌다
       const nw = img.naturalWidth || r.width;
       const nh = img.naturalHeight || r.height;
+      natural = { w: nw, h: nh };
       const scale = Math.min(Math.min(window.innerWidth * 0.92, 1100) / nw, window.innerHeight * 0.84 / nh);
       const endCss = 'width:' + Math.round(nw * scale) + 'px;height:' + Math.round(nh * scale) + 'px;';
 
       if (canFlip) {
         const start = Flip.getState(clone);
         clone.style.cssText = endCss;
+        gsap.killTweensOf(box); // 닫기 페이드가 아직 돌고 있으면 충돌한다
         gsap.fromTo(box, { opacity: 0 }, { opacity: 1, duration: 0.22, ease: 'power1.out' });
         Flip.from(start, { duration: 0.5, ease: 'power2.inOut', absolute: true, props: 'borderRadius' });
       } else {
@@ -89,9 +117,18 @@
 
       const sm = typeof ScrollSmoother !== 'undefined' ? ScrollSmoother.get() : null;
       const finish = () => {
-        c.remove(); box.hidden = true; box.style.opacity = '';
+        c.remove();
+        // 닫히는 동안 다른 썸네일을 눌러 새로 열렸다면 그쪽 상태를 건드리면 안 된다.
+        // (이 콜백이 새 라이트박스를 다시 숨겨서 확대가 통째로 먹통이 됐었다)
+        if (clone) return;
+        box.hidden = true; box.style.opacity = '';
+        natural = null;
+        inertTargets().forEach((el) => { el.inert = false; });
         // paused()가 네이티브 스크롤바까지 막지는 못해 해제 시 그쪽으로 튄다 — 열 때 위치로 되돌린다
         if (sm) { sm.paused(false); sm.scrollTop(savedY); }
+        else { document.documentElement.style.overflow = ''; window.scrollTo(0, savedY); }
+        // 모달이 완전히 사라진 뒤에 포커스를 되돌린다
+        if (opener) opener.focus({ preventScroll: true });
       };
       const img = opener && opener.querySelector('img');
       if (canFlip && img) {
@@ -104,7 +141,6 @@
       } else {
         finish();
       }
-      if (opener) opener.focus({ preventScroll: true });
     }
 
     function onKey(e) { if (e.key === 'Escape') close(); }
@@ -122,7 +158,9 @@
     gsap.registerPlugin(ScrollSmoother);
     smoother = ScrollSmoother.create({ smooth: 1.1, effects: false });
 
-    // smoother가 스크롤을 가로채므로 앵커 이동을 직접 위임한다
+    // smoother가 스크롤을 가로채므로 앵커 이동을 직접 위임한다.
+    // 주소창 해시·뒤로가기는 의도적으로 갱신하지 않는다 — pushState + popstate로
+    // 붙여봤더니 smoother의 transform과 어긋나 뒤로가기 후 화면이 통째로 비었다.
     document.querySelectorAll('a[href^="#"]').forEach((a) => {
       a.addEventListener('click', (e) => {
         const target = document.querySelector(a.getAttribute('href'));
