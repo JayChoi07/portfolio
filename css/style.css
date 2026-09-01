@@ -75,6 +75,9 @@ body { word-break: keep-all; overflow-wrap: break-word; }
 /* 스크린샷 확대 — 썸네일이 240px대라 게이지 수치가 안 읽힌다 */
 .phone, .auto-shot { cursor: zoom-in; }
 .phone:focus-visible, .auto-shot:focus-visible { outline: 2px solid var(--acc-focus); outline-offset: 4px; }
+/* display:flex는 작성자 스타일이라 브라우저 기본 [hidden]{display:none}을 이긴다.
+   이 규칙이 없으면 라이트박스가 항상 떠서 페이지 전체 클릭을 막는다 */
+.lightbox[hidden] { display: none; }
 .lightbox {
   position: fixed; inset: 0; z-index: 200;
   display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
