@@ -27,6 +27,7 @@
 
     let clone = null;
     let opener = null;
+    let savedY = 0;
 
     document.querySelectorAll('.phone, .auto-shot').forEach((frame) => {
       const img = frame.querySelector('img');
@@ -47,6 +48,10 @@
       const figcap = frame.parentElement && frame.parentElement.querySelector('figcaption');
       cap.textContent = figcap ? figcap.textContent : (img.alt || '');
 
+      // 배경이 스크롤되면 닫을 때 썸네일 좌표가 어긋나므로 멈춰둔다
+      const sm = typeof ScrollSmoother !== 'undefined' ? ScrollSmoother.get() : null;
+      if (sm) { savedY = sm.scrollTop(); sm.paused(true); }
+
       clone = img.cloneNode(true);
       clone.removeAttribute('loading');
       const r = img.getBoundingClientRect();
@@ -56,15 +61,23 @@
       stage.appendChild(clone);
       box.hidden = false;
 
+      // 끝 상태 크기를 직접 계산한다 — width/height:auto에 맡기면 복제본이
+      // 아직 디코딩 전일 때 naturalWidth가 0이라 0x0으로 접힌다
+      const nw = img.naturalWidth || r.width;
+      const nh = img.naturalHeight || r.height;
+      const scale = Math.min(Math.min(window.innerWidth * 0.92, 1100) / nw, window.innerHeight * 0.84 / nh);
+      const endCss = 'width:' + Math.round(nw * scale) + 'px;height:' + Math.round(nh * scale) + 'px;';
+
       if (canFlip) {
         const start = Flip.getState(clone);
-        clone.style.cssText = ''; // 끝 상태 = CSS가 정한 확대 레이아웃
+        clone.style.cssText = endCss;
         gsap.fromTo(box, { opacity: 0 }, { opacity: 1, duration: 0.22, ease: 'power1.out' });
         Flip.from(start, { duration: 0.5, ease: 'power2.inOut', absolute: true, props: 'borderRadius' });
       } else {
-        clone.style.cssText = '';
+        clone.style.cssText = endCss;
       }
-      closeBtn.focus();
+      // preventScroll 없이 포커스하면 브라우저가 스크롤을 건드려 smoother가 통째로 점프한다
+      closeBtn.focus({ preventScroll: true });
       document.addEventListener('keydown', onKey);
     }
 
@@ -74,7 +87,12 @@
       clone = null;
       document.removeEventListener('keydown', onKey);
 
-      const finish = () => { c.remove(); box.hidden = true; box.style.opacity = ''; };
+      const sm = typeof ScrollSmoother !== 'undefined' ? ScrollSmoother.get() : null;
+      const finish = () => {
+        c.remove(); box.hidden = true; box.style.opacity = '';
+        // paused()가 네이티브 스크롤바까지 막지는 못해 해제 시 그쪽으로 튄다 — 열 때 위치로 되돌린다
+        if (sm) { sm.paused(false); sm.scrollTop(savedY); }
+      };
       const img = opener && opener.querySelector('img');
       if (canFlip && img) {
         const start = Flip.getState(c);
@@ -86,7 +104,7 @@
       } else {
         finish();
       }
-      if (opener) opener.focus();
+      if (opener) opener.focus({ preventScroll: true });
     }
 
     function onKey(e) { if (e.key === 'Escape') close(); }
