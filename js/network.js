@@ -17,8 +17,8 @@
     z = (z + Math.imul(z ^ (z >>> 7), 61 | z)) ^ z;
     return ((z ^ (z >>> 14)) >>> 0) / 4294967296;
   }
-  const ACC = '61, 220, 132';   // #3ddc84
-  const INK = '233, 236, 242';
+  const ACC = '21, 121, 63';    // #15793f — 밝은 배경에서도 선명한 딥 그린
+  const INK = '20, 24, 31';     // #14181f — 오프화이트 위 잉크
 
   let W = 0, H = 0, dpr = 1, cx = 0, cy = 0;
   let rotY = 0, rotX = -0.18;
@@ -105,7 +105,7 @@
         const dx = a.x3 - b.x3, dy = a.y3 - b.y3, dz = a.z3 - b.z3;
         const d = Math.sqrt(dx * dx + dy * dy + dz * dz);
         if (d > LINK_DIST) continue;
-        const alpha = (1 - d / LINK_DIST) * 0.17 * Math.min(a.s, b.s) * Math.min(a.k, b.k);
+        const alpha = (1 - d / LINK_DIST) * 0.22 * Math.min(a.s, b.s) * Math.min(a.k, b.k);
         ctx.strokeStyle = 'rgba(' + INK + ',' + alpha.toFixed(3) + ')';
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
@@ -128,7 +128,7 @@
         const px = a.x + (b.x - a.x) * pl.t;
         const py = a.y + (b.y - a.y) * pl.t;
         const fade = Math.sin(pl.t * Math.PI);
-        ctx.fillStyle = 'rgba(' + ACC + ',' + (0.85 * fade).toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(' + ACC + ',' + (1 * fade).toFixed(3) + ')';
         ctx.beginPath();
         ctx.arc(px, py, 1.8 * a.s, 0, Math.PI * 2);
         ctx.fill();
@@ -141,15 +141,15 @@
       if (q.k <= 0) continue;
       const depth = 0.35 + 0.65 * q.s;
       if (p.accent) {
-        ctx.shadowColor = 'rgba(' + ACC + ',.9)';
-        ctx.shadowBlur = 10 * q.s;
-        ctx.fillStyle = 'rgba(' + ACC + ',' + (0.9 * depth * q.k).toFixed(3) + ')';
+        ctx.shadowColor = 'rgba(' + ACC + ',.5)';
+        ctx.shadowBlur = 4 * q.s;
+        ctx.fillStyle = 'rgba(' + ACC + ',' + (1 * depth * q.k).toFixed(3) + ')';
         ctx.beginPath();
         ctx.arc(q.x, q.y, 2.4 * q.s, 0, Math.PI * 2);
         ctx.fill();
         ctx.shadowBlur = 0;
       } else {
-        ctx.fillStyle = 'rgba(' + INK + ',' + (0.5 * depth * q.k).toFixed(3) + ')';
+        ctx.fillStyle = 'rgba(' + INK + ',' + (0.58 * depth * q.k).toFixed(3) + ')';
         ctx.beginPath();
         ctx.arc(q.x, q.y, 1.4 * q.s, 0, Math.PI * 2);
         ctx.fill();
