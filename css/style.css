@@ -66,7 +66,35 @@ h2 {
   line-height: 1.12;
   margin-bottom: 18px;
 }
+/* 인트로는 단어형이 아니라 문장형 헤드라인이라 한 단계 낮춘다 */
+#intro h2 { font-size: clamp(24px, 2.8vw, 36px); line-height: 1.34; margin-bottom: 44px; }
 .lead { font-size: 19px; color: var(--mut); max-width: 46em; margin-bottom: 56px; }
+/* 한글은 기본값(글자 단위 줄바꿈)이면 "진단 앱/입니다"처럼 어절이 갈라진다 */
+body { word-break: keep-all; overflow-wrap: break-word; }
+
+/* 스크린샷 확대 — 썸네일이 240px대라 게이지 수치가 안 읽힌다 */
+.phone, .auto-shot { cursor: zoom-in; }
+.phone:focus-visible, .auto-shot:focus-visible { outline: 2px solid var(--acc-focus); outline-offset: 4px; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+  padding: 64px 24px 40px;
+  background: rgba(250, 250, 249, 0.94); backdrop-filter: blur(12px);
+}
+.lightbox-stage { display: flex; align-items: center; justify-content: center; }
+.lightbox img {
+  display: block; width: auto; height: auto;
+  max-width: min(92vw, 1100px); max-height: 84vh;
+  object-fit: contain; border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(20, 24, 31, 0.18);
+}
+.lightbox-close {
+  position: absolute; top: 22px; right: 26px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+  padding: 9px 16px; color: var(--mut); font-size: 12px; cursor: pointer;
+}
+.lightbox-close:hover { color: var(--ink); border-color: var(--acc-focus); }
+.lightbox-cap { color: var(--mut); font-size: 13px; text-align: center; }
 
 /* ============ Progress + Nav ============ */
 #progressBar {

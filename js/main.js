@@ -14,9 +14,106 @@
   } catch (e) { /* 실패 시 정적 텍스트 유지 */ }
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ── 스크린샷 확대 — 모션을 끈 사용자도 써야 하므로 early return 앞에 둔다
+  (function lightbox() {
+    const box = document.getElementById('lightbox');
+    if (!box) return;
+    const stage = box.querySelector('.lightbox-stage');
+    const cap = box.querySelector('.lightbox-cap');
+    const closeBtn = box.querySelector('.lightbox-close');
+    const canFlip = !reduceMotion && typeof gsap !== 'undefined' && typeof Flip !== 'undefined';
+    if (canFlip) gsap.registerPlugin(Flip);
+
+    let clone = null;
+    let opener = null;
+
+    document.querySelectorAll('.phone, .auto-shot').forEach((frame) => {
+      const img = frame.querySelector('img');
+      if (!img) return;
+      frame.tabIndex = 0;
+      frame.setAttribute('role', 'button');
+      frame.setAttribute('aria-label', (img.alt || '스크린샷') + ' — 확대해서 보기');
+      frame.addEventListener('click', () => open(frame, img));
+      frame.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(frame, img); }
+      });
+    });
+
+    // 원본은 그대로 두고 복제본만 띄운다 — .auto-shot이 overflow:hidden이라 원본을 옮기면 잘린다
+    function open(frame, img) {
+      if (clone) return;
+      opener = frame;
+      const figcap = frame.parentElement && frame.parentElement.querySelector('figcaption');
+      cap.textContent = figcap ? figcap.textContent : (img.alt || '');
+
+      clone = img.cloneNode(true);
+      clone.removeAttribute('loading');
+      const r = img.getBoundingClientRect();
+      // 시작 상태 = 썸네일 자리
+      clone.style.cssText = 'position:fixed;margin:0;left:' + r.left + 'px;top:' + r.top +
+        'px;width:' + r.width + 'px;height:' + r.height + 'px;object-fit:cover;border-radius:22px;';
+      stage.appendChild(clone);
+      box.hidden = false;
+
+      if (canFlip) {
+        const start = Flip.getState(clone);
+        clone.style.cssText = ''; // 끝 상태 = CSS가 정한 확대 레이아웃
+        gsap.fromTo(box, { opacity: 0 }, { opacity: 1, duration: 0.22, ease: 'power1.out' });
+        Flip.from(start, { duration: 0.5, ease: 'power2.inOut', absolute: true, props: 'borderRadius' });
+      } else {
+        clone.style.cssText = '';
+      }
+      closeBtn.focus();
+      document.addEventListener('keydown', onKey);
+    }
+
+    function close() {
+      if (!clone) return;
+      const c = clone;
+      clone = null;
+      document.removeEventListener('keydown', onKey);
+
+      const finish = () => { c.remove(); box.hidden = true; box.style.opacity = ''; };
+      const img = opener && opener.querySelector('img');
+      if (canFlip && img) {
+        const start = Flip.getState(c);
+        const r = img.getBoundingClientRect();
+        c.style.cssText = 'position:fixed;margin:0;left:' + r.left + 'px;top:' + r.top +
+          'px;width:' + r.width + 'px;height:' + r.height + 'px;object-fit:cover;border-radius:22px;';
+        Flip.from(start, { duration: 0.42, ease: 'power2.inOut', absolute: true, props: 'borderRadius' });
+        gsap.to(box, { opacity: 0, duration: 0.34, delay: 0.08, onComplete: finish });
+      } else {
+        finish();
+      }
+      if (opener) opener.focus();
+    }
+
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    closeBtn.addEventListener('click', close);
+    box.addEventListener('click', (e) => { if (e.target === box || e.target === stage) close(); });
+  })();
+
   if (reduceMotion || typeof gsap === 'undefined') return; // 모션 없이 전부 표시
 
   gsap.registerPlugin(ScrollTrigger);
+
+  // ── 관성 스무스 스크롤 — 다른 ScrollTrigger보다 먼저 만들어야 좌표가 맞는다
+  let smoother = null;
+  if (typeof ScrollSmoother !== 'undefined' && document.getElementById('smooth-wrapper')) {
+    gsap.registerPlugin(ScrollSmoother);
+    smoother = ScrollSmoother.create({ smooth: 1.1, effects: false });
+
+    // smoother가 스크롤을 가로채므로 앵커 이동을 직접 위임한다
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+        smoother.scrollTo(target, true, 'top 64px');
+      });
+    });
+  }
 
   // ── 상단 진행 바
   gsap.to('#progressBar', {

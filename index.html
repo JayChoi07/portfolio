@@ -23,6 +23,10 @@
   </div>
 </nav>
 
+<!-- ScrollSmoother 래퍼 — 고정 요소(nav·progressBar)는 반드시 이 바깥에 둔다 -->
+<div id="smooth-wrapper">
+<div id="smooth-content">
+
 <!-- ============ HERO ============ -->
 <header id="top" class="hero">
   <canvas id="net" aria-hidden="true"></canvas>
@@ -49,9 +53,8 @@
 <section id="intro" class="section">
   <div class="container">
     <p class="eyebrow mono rv">INTRO</p>
-    <h2 class="rv">레거시 Java 코드베이스 위에서,<br>Kotlin으로 갈아끼우는 중입니다.</h2>
-    <p class="lead rv">인포카는 OBD2 스캐너로 차량 상태를 읽는 진단 앱입니다 — 누적 1,000만 다운로드, 22개 로케일.
-    저는 이 앱의 안드로이드를 맡아 블루투스 통신 레이어부터 결제·광고·안드로이드 오토까지 다룹니다.</p>
+    <h2 class="rv">인포카는 OBD2 스캐너로 차량 상태를 읽는 진단 앱입니다 — 누적 1,000만 다운로드, 22개 로케일.
+    저는 이 앱의 안드로이드를 맡아 블루투스 통신 레이어부터 결제·광고·안드로이드 오토까지 다룹니다.</h2>
 
     <div class="bento rv">
       <div class="tile tile-wide">
@@ -554,9 +557,21 @@
   </div>
 </footer>
 
+</div><!-- /#smooth-content -->
+</div><!-- /#smooth-wrapper -->
+
+<!-- 스크린샷 확대 — smooth-wrapper 바깥이라야 transform 영향을 안 받는다 -->
+<div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="스크린샷 확대">
+  <button class="lightbox-close mono" type="button" aria-label="닫기">ESC ✕</button>
+  <div class="lightbox-stage"></div>
+  <p class="lightbox-cap mono"></p>
+</div>
+
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
 <script src="vendor/SplitText.min.js"></script>
+<script src="vendor/ScrollSmoother.min.js"></script>
+<script src="vendor/Flip.min.js"></script>
 <script src="js/network.js"></script>
 <script src="js/main.js"></script>
 </body>
