@@ -40,7 +40,7 @@
       <div role="listitem"><strong class="mono">4<span class="u">개</span></strong><small>주요 프로젝트</small></div>
     </div>
   </div>
-  <a class="scroll-cue mono" href="#intro" aria-label="아래로 스크롤">SCROLL<span class="cue-line"></span></a>
+  <a class="scroll-cue mono" href="#intro" aria-label="SCROLL — 아래로 스크롤">SCROLL<span class="cue-line"></span></a>
 </header>
 
 <main>
@@ -118,7 +118,7 @@
         <span class="tl-dot"></span>
         <span class="tl-date mono">2025.09 — 2025.12</span>
         <h3>프리셋 대시보드 (OBD 차량 데이터)</h3>
-        <p>B2B 기능을 B2C에 이식 · 5종 엔진 × 3종 대시보드 · 설정 자동 복구 + 데이터 마이그레이션.</p>
+        <p>B2B 기능을 B2C에 이식 · 5종 엔진 × 4종 대시보드 · 설정 자동 복구 + 데이터 마이그레이션.</p>
       </article>
       <article class="tl-item rv">
         <span class="tl-dot"></span>
@@ -214,8 +214,8 @@
       <div class="banner-head"><h3>광고 · 미디에이션</h3><span class="mono">PROJECT 03 — 5개 네트워크 워터폴 구축·운영 후 2025.12 철수 · 현재는 AdMob 단일 + 원격 제어</span></div>
       <div class="chips">
         <span class="chip chip-acc">AdMob</span><span class="chip chip-acc">UMP (GDPR/CCPA)</span>
-        <span class="chip">AppLovin</span><span class="chip">ironSource</span>
-        <span class="chip">Mintegral</span><span class="chip">Pangle</span><span class="chip">Unity Ads</span>
+        <span class="chip chip-past">AppLovin</span><span class="chip chip-past">ironSource</span>
+        <span class="chip chip-past">Mintegral</span><span class="chip chip-past">Pangle</span><span class="chip chip-past">Unity Ads</span>
       </div>
     </div>
   </div>
@@ -275,7 +275,7 @@
       <a href="#p2" class="work-card">
         <span class="mono">P.02 · 2025.09 — 12</span>
         <h3>프리셋 대시보드 (OBD)</h3>
-        <p>B2B 기능의 B2C 이식 · 5종 엔진 × 3종 대시보드.</p>
+        <p>B2B 기능의 B2C 이식 · 5종 엔진 × 4종 대시보드.</p>
       </a>
       <a href="#p3" class="work-card">
         <span class="mono">P.03 · 2025.03 — 05</span>
@@ -292,7 +292,7 @@
 </section>
 
 <!-- ============ P.01 ============ -->
-<section id="p1" class="section proj proj-flag">
+<section id="p1" class="section proj">
   <div class="container">
     <p class="eyebrow mono rv">P.01 · CS 자동화 칸반보드 — CS-KANBAN</p>
     <h2 class="rv">출근 전에,<br>CS 분석이 끝나 있도록.</h2>
@@ -301,12 +301,12 @@
     수집부터 AI 진단·답변초안·발송까지 이어지는 파이프라인을 설계하고, 제가 맡은 범위를 구축해 팀 업무에 연결했습니다.</p>
 
     <div class="table rv" role="table" aria-label="수동 루틴과 파이프라인 비교">
-      <div class="tr th" role="row"><span>단계</span><span>Before · 수동</span><span>After · 파이프라인</span><span>효과</span></div>
-      <div class="tr" role="row"><span>문의 확인</span><span class="mut">메일함 수동 확인</span><span>20분 주기 자동 수집 · 칸반 카드화</span><span class="acc mono">무인화</span></div>
-      <div class="tr" role="row"><span>로그 분석</span><span class="mut">zip 수동 다운로드·대조</span><span>자동 해제·파싱 · 개인정보 마스킹</span><span class="acc mono">자동</span></div>
-      <div class="tr" role="row"><span>원인 진단</span><span class="mut">IDE 열어 코드 추적</span><span>AI가 사내 위키·앱 코드 교차검증</span><span class="acc mono">자동</span></div>
-      <div class="tr" role="row"><span>답변 작성</span><span class="mut">백지에서 작성</span><span>근거 인용된 한국어 초안 자동 생성</span><span class="acc mono">검토만</span></div>
-      <div class="tr" role="row"><span>발송</span><span class="mut">초안 복사 → 수동 발송</span><span>보드에서 원클릭 발송 · 이중 발송 방지</span><span class="acc mono">원클릭</span></div>
+      <div class="tr th" role="row"><span role="columnheader">단계</span><span role="columnheader">Before · 수동</span><span role="columnheader">After · 파이프라인</span><span role="columnheader">효과</span></div>
+      <div class="tr" role="row"><span role="cell">문의 확인</span><span role="cell" class="mut">메일함 수동 확인</span><span role="cell">20분 주기 자동 수집 · 칸반 카드화</span><span role="cell" class="acc mono">무인화</span></div>
+      <div class="tr" role="row"><span role="cell">로그 분석</span><span role="cell" class="mut">zip 수동 다운로드·대조</span><span role="cell">자동 해제·파싱 · 개인정보 마스킹</span><span role="cell" class="acc mono">자동</span></div>
+      <div class="tr" role="row"><span role="cell">원인 진단</span><span role="cell" class="mut">IDE 열어 코드 추적</span><span role="cell">AI가 사내 위키·앱 코드 교차검증</span><span role="cell" class="acc mono">자동</span></div>
+      <div class="tr" role="row"><span role="cell">답변 작성</span><span role="cell" class="mut">백지에서 작성</span><span role="cell">근거 인용된 한국어 초안 자동 생성</span><span role="cell" class="acc mono">검토만</span></div>
+      <div class="tr" role="row"><span role="cell">발송</span><span role="cell" class="mut">초안 복사 → 수동 발송</span><span role="cell">보드에서 원클릭 발송 · 이중 발송 방지</span><span role="cell" class="acc mono">원클릭</span></div>
     </div>
 
     <div class="diagram rv">
@@ -435,11 +435,11 @@
     </div>
 
     <div class="table rv" role="table" aria-label="프리셋 대시보드 개선 지표">
-      <div class="tr th" role="row"><span>지표</span><span>Before</span><span>After</span><span>효과</span></div>
-      <div class="tr" role="row"><span>신규 항목 추가</span><span class="mut">서너 군데 수정</span><span>한 곳만 수정</span><span class="acc mono">간소화</span></div>
-      <div class="tr" role="row"><span>지원 엔진 타입</span><span class="mut">2종</span><span>5종</span><span class="acc mono">▲ 2.5×</span></div>
-      <div class="tr" role="row"><span>레이아웃 분기</span><span class="mut">1종</span><span>4종</span><span class="acc mono">▲ 4×</span></div>
-      <div class="tr" role="row"><span>사용자 매핑 옵션</span><span class="mut">0 (하드코딩)</span><span>항목별 N:1 선택</span><span class="acc mono">신규</span></div>
+      <div class="tr th" role="row"><span role="columnheader">지표</span><span role="columnheader">Before</span><span role="columnheader">After</span><span role="columnheader">효과</span></div>
+      <div class="tr" role="row"><span role="cell">신규 항목 추가</span><span role="cell" class="mut">서너 군데 수정</span><span role="cell">한 곳만 수정</span><span role="cell" class="acc mono">간소화</span></div>
+      <div class="tr" role="row"><span role="cell">지원 엔진 타입</span><span role="cell" class="mut">2종</span><span role="cell">5종</span><span role="cell" class="acc mono">▲ 2.5×</span></div>
+      <div class="tr" role="row"><span role="cell">레이아웃 분기</span><span role="cell" class="mut">1종</span><span role="cell">4종</span><span role="cell" class="acc mono">▲ 4×</span></div>
+      <div class="tr" role="row"><span role="cell">사용자 매핑 옵션</span><span role="cell" class="mut">0 (하드코딩)</span><span role="cell">항목별 N:1 선택</span><span role="cell" class="acc mono">신규</span></div>
     </div>
   </div>
 </section>
@@ -481,11 +481,11 @@
     </div>
 
     <div class="table rv" role="table" aria-label="광고 미디에이션 개선 지표">
-      <div class="tr th" role="row"><span>지표</span><span>Before</span><span>After</span><span>효과</span></div>
-      <div class="tr" role="row"><span>미디에이션 네트워크</span><span class="mut">AdMob 1개</span><span>AdMob + 5개</span><span class="acc mono">▲ 6×</span></div>
-      <div class="tr" role="row"><span>광고 단위 ID</span><span class="mut">~7개</span><span>12개</span><span class="acc mono">세분화</span></div>
-      <div class="tr" role="row"><span>정책 변경 속도</span><span class="mut">스토어 재배포</span><span>Remote Config 실시간</span><span class="acc mono">즉시</span></div>
-      <div class="tr" role="row"><span>한국·일본 광고</span><span class="mut">없음</span><span>자체 + AdMob 통합</span><span class="acc mono">신규</span></div>
+      <div class="tr th" role="row"><span role="columnheader">지표</span><span role="columnheader">Before</span><span role="columnheader">After</span><span role="columnheader">효과</span></div>
+      <div class="tr" role="row"><span role="cell">미디에이션 네트워크</span><span role="cell" class="mut">AdMob 1개</span><span role="cell">AdMob + 5개</span><span role="cell" class="acc mono">▲ 6×</span></div>
+      <div class="tr" role="row"><span role="cell">광고 단위 ID</span><span role="cell" class="mut">~7개</span><span role="cell">12개</span><span role="cell" class="acc mono">세분화</span></div>
+      <div class="tr" role="row"><span role="cell">정책 변경 속도</span><span role="cell" class="mut">스토어 재배포</span><span role="cell">Remote Config 실시간</span><span role="cell" class="acc mono">즉시</span></div>
+      <div class="tr" role="row"><span role="cell">한국·일본 광고</span><span role="cell" class="mut">없음</span><span role="cell">자체 + AdMob 통합</span><span role="cell" class="acc mono">신규</span></div>
     </div>
   </div>
 </section>
@@ -534,6 +534,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ============ CONTACT ============ -->
 <footer id="contact" class="section contact">
   <div class="container">
@@ -552,10 +554,9 @@
   </div>
 </footer>
 
-</main>
-
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
 <script src="js/network.js"></script>
 <script src="js/main.js"></script>
 </body>

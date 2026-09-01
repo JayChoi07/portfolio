@@ -25,17 +25,24 @@
     scrollTrigger: { start: 0, end: 'max', scrub: 0.3 },
   });
 
-  // ── 히어로 인트로
-  const lines = document.querySelectorAll('.hero-title .line');
-  lines.forEach((line) => {
-    const inner = document.createElement('span');
-    inner.className = 'word';
-    while (line.firstChild) inner.appendChild(line.firstChild);
-    line.appendChild(inner);
-  });
+  // ── 히어로 인트로 — SplitText로 어절 단위 분해. 플러그인이 없으면 줄 단위로 폴백
+  let heroParts;
+  if (typeof SplitText !== 'undefined') {
+    gsap.registerPlugin(SplitText);
+    // 한국어는 Intl.Segmenter가 조사까지 쪼갤 수 있어 공백 기준으로 고정
+    heroParts = new SplitText('.hero-title', { type: 'words', wordsClass: 'word', wordDelimiter: ' ' }).words;
+  } else {
+    document.querySelectorAll('.hero-title .line').forEach((line) => {
+      const inner = document.createElement('span');
+      inner.className = 'word';
+      while (line.firstChild) inner.appendChild(line.firstChild);
+      line.appendChild(inner);
+    });
+    heroParts = document.querySelectorAll('.hero-title .word');
+  }
   gsap.timeline({ defaults: { ease: 'power3.out' } })
     .from('.hero-eyebrow', { y: 18, opacity: 0, duration: 0.7 }, 0.15)
-    .from('.hero-title .word', { yPercent: 112, duration: 1.0, stagger: 0.12 }, 0.25)
+    .from(heroParts, { yPercent: 112, duration: 1.0, stagger: 0.09 }, 0.25)
     .from('.hero-sub', { y: 22, opacity: 0, duration: 0.8 }, 0.75)
     .from('.hero-stats > div', { y: 24, opacity: 0, duration: 0.7, stagger: 0.1 }, 0.95)
     .from('.scroll-cue', { opacity: 0, duration: 0.8 }, 1.3);
